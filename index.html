@@ -378,9 +378,7 @@ p{
   opacity:.82;
   margin-bottom:25px;
 }
-
-
-/* MESSAGE PAGE */
+  /* MESSAGE PAGE */
 
 #messagePage{
   display:none;
@@ -680,9 +678,7 @@ p{
   opacity:.9;
   margin-bottom:22px;
 }
-
-
-/* CHOCOLATE */
+  /* CHOCOLATE */
 
 .chocolateTitle{
   margin-bottom:25px;
@@ -1012,7 +1008,7 @@ p{
 </section>
 
 
-<!-- SOUND -->
+<!-- SOUND PAGE -->
 
 <section id="soundPage" class="page">
 
@@ -1051,9 +1047,7 @@ p{
   </div>
 
 </section>
-
-
-<!-- BIRTHDAY -->
+  <!-- BIRTHDAY PAGE -->
 
 <section id="birthdayPage" class="page">
 
@@ -1089,7 +1083,7 @@ p{
 </section>
 
 
-<!-- MESSAGE -->
+<!-- MESSAGE PAGE -->
 
 <section id="messagePage" class="page">
 
@@ -1298,9 +1292,7 @@ Enjoy your most delicious life.
   </div>
 
 </section>
-
-
-<!-- CHOCOLATE RESPONSE -->
+  <!-- CHOCOLATE RESPONSE -->
 
 <section id="chocolateResponsePage" class="page">
 
@@ -1355,7 +1347,7 @@ Enjoy your most delicious life.
 </section>
 
 
-<!-- FINAL -->
+<!-- FINAL PAGE -->
 
 <section id="finalPage" class="page">
 
@@ -1419,35 +1411,33 @@ const video =
 function showPage(pageId){
 
   const pages =
-  document.querySelectorAll(
-    ".page"
-  );
+    document.querySelectorAll(
+      ".page"
+    );
 
-pages.forEach(function(page){
+  pages.forEach(function(page){
 
-  page.classList.remove(
-    "active"
-  );
+    page.classList.remove(
+      "active"
+    );
 
-});
+  });
 
-const page =
-  document.getElementById(
-    pageId
-  );
+  const page =
+    document.getElementById(
+      pageId
+    );
 
-if(page){
+  if(page){
 
-  page.classList.add(
-    "active"
-  );
+    page.classList.add(
+      "active"
+    );
+
+  }
 
 }
-
-}
-
-
-/* BUBBLE SOUND */
+  /* BUBBLE SOUND */
 
 function bubblePopSound(){
 
@@ -1739,7 +1729,9 @@ function checkPassword(){
 
 
 document
-  .getElementById("passwordInput")
+  .getElementById(
+    "passwordInput"
+  )
   .addEventListener(
     "keydown",
     function(event){
@@ -1810,7 +1802,6 @@ function speakHelloAndShowContinue(){
 
 
   speechSynthesis.cancel();
-
   speechSynthesis.resume();
 
 
@@ -1848,7 +1839,6 @@ function speakHelloAndShowContinue(){
           (v.lang || "")
           .toLowerCase();
 
-
         if(
           !lang.startsWith("en")
         ){
@@ -1856,7 +1846,6 @@ function speakHelloAndShowContinue(){
           return false;
 
         }
-
 
         return (
           name.includes("male") ||
@@ -1888,30 +1877,24 @@ function speakHelloAndShowContinue(){
   voice.onstart =
     function(){
 
-      setTimeout(
-        function(){
+      setTimeout(function(){
 
-          continueButton.classList.add(
-            "show"
-          );
+        continueButton.classList.add(
+          "show"
+        );
 
-        },
-        500
-      );
+      },500);
 
     };
 
 
-  setTimeout(
-    function(){
+  setTimeout(function(){
 
-      continueButton.classList.add(
-        "show"
-      );
+    continueButton.classList.add(
+      "show"
+    );
 
-    },
-    1800
-  );
+  },1800);
 
 }
 
@@ -1931,16 +1914,9 @@ function goToSoundPage(){
 
 function startBirthday(){
 
-  /*
-    Happy Birthday page opens
-    and Haareya starts from
-    the same user click.
-  */
-
   showPage(
     "birthdayPage"
   );
-
 
   music.volume =
     1.0;
@@ -1948,10 +1924,8 @@ function startBirthday(){
   music.currentTime =
     0;
 
-
   const promise =
     music.play();
-
 
   if(
     promise !== undefined
@@ -1971,16 +1945,13 @@ function startBirthday(){
   }
 
 }
-
-
-/* MESSAGE PAGE */
+  /* MESSAGE PAGE */
 
 function openMessagePage(){
 
   showPage(
     "messagePage"
   );
-
 
   const button =
     document.getElementById(
@@ -2079,9 +2050,9 @@ function checkMessageScroll(){
 
 
   /*
+    Continue will appear when
     "Grow a lot in life..."
-    text screen-e visible holei
-    Continue button show hobe.
+    becomes visible on screen.
   */
 
   const triggerRect =
@@ -2156,16 +2127,13 @@ function scrollHintError(){
   );
 
 
-  setTimeout(
-    function(){
+  setTimeout(function(){
 
-      error.classList.remove(
-        "show"
-      );
+    error.classList.remove(
+      "show"
+    );
 
-    },
-    2200
-  );
+  },2200);
 
 }
 
@@ -2220,16 +2188,13 @@ function closeNotificationAndOpenChocolate(){
   );
 
 
-  setTimeout(
-    function(){
+  setTimeout(function(){
 
-      showPage(
-        "chocolatePage"
-      );
+    showPage(
+      "chocolatePage"
+    );
 
-    },
-    1400
-  );
+  },1400);
 
 }
 
@@ -2261,24 +2226,19 @@ function chooseSomethingElse(){
       "chocolateInput"
     );
 
-
   input.value =
     "";
-
 
   showPage(
     "chocolateInputPage"
   );
 
 
-  setTimeout(
-    function(){
+  setTimeout(function(){
 
-      input.focus();
+    input.focus();
 
-    },
-    300
-  );
+  },300);
 
 }
 
@@ -2291,7 +2251,6 @@ function submitChocolate(){
     document.getElementById(
       "chocolateInput"
     );
-
 
   const chocolate =
     input.value.trim();
@@ -2346,15 +2305,13 @@ document
 
     }
   );
-
-
-/* VIDEO */
+  /* VIDEO */
 
 function openVideoPage(){
 
   /*
-    Video page open korar age
-    music pause hobe.
+    Video page open hole
+    Haareya pause hobe.
   */
 
   music.pause();
@@ -2369,33 +2326,30 @@ function openVideoPage(){
     0;
 
 
-  setTimeout(
-    function(){
+  setTimeout(function(){
 
-      const promise =
-        video.play();
+    const promise =
+      video.play();
 
 
-      if(
-        promise !== undefined
-      ){
+    if(
+      promise !== undefined
+    ){
 
-        promise.catch(
-          function(error){
+      promise.catch(
+        function(error){
 
-            console.log(
-              "Video autoplay blocked:",
-              error
-            );
+          console.log(
+            "Video autoplay blocked:",
+            error
+          );
 
-          }
-        );
+        }
+      );
 
-      }
+    }
 
-    },
-    250
-  );
+  },250);
 
 }
 
@@ -2424,7 +2378,7 @@ video.addEventListener(
     */
 
     music.volume =
-      1;
+      1.0;
 
 
     const promise =
@@ -2449,16 +2403,13 @@ video.addEventListener(
     }
 
 
-    setTimeout(
-      function(){
+    setTimeout(function(){
 
-        showPage(
-          "finalPage"
-        );
+      showPage(
+        "finalPage"
+      );
 
-      },
-      350
-    );
+    },350);
 
   }
 );
@@ -2496,3 +2447,15 @@ if(
     };
 
 }
+
+
+</script>
+
+</body>
+</html>
+  
+  
+  
+  
+  
+  
