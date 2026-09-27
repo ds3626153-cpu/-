@@ -1,468 +1,1038 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>For Rheet 🤍</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>For Deepika 💗</title>
 
 <style>
+
 *{
   box-sizing:border-box;
+}
+
+html,
+body{
   margin:0;
   padding:0;
+  min-height:100%;
 }
 
 body{
+
   min-height:100vh;
-  font-family:Poppins,sans-serif;
-  color:#fff;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  color:white;
+
   overflow-x:hidden;
+
   background:
-    radial-gradient(circle at 10% 10%,#8e3cff40,transparent 35%),
-    radial-gradient(circle at 90% 90%,#ff3f9f35,transparent 35%),
-    linear-gradient(135deg,#100018,#290332,#120019);
+
+    radial-gradient(
+      circle at 15% 0%,
+      #9b45c6 0%,
+      #681d88 25%,
+      #35004f 52%,
+      #22002f 68%,
+      #c52f83 100%
+    );
+
+  background-attachment:fixed;
+
 }
 
-.page{
-  display:none;
-  min-height:100vh;
-  width:100%;
-  align-items:center;
-  justify-content:center;
-  padding:20px 10px;
-  position:relative;
+
+/* =========================
+   FLOATING EMOJIS
+========================= */
+
+.floating{
+
+  position:fixed;
+
   z-index:2;
+
+  pointer-events:none;
+
+  opacity:.28;
+
+  font-size:25px;
+
+  animation:
+    floatEmoji 8s linear infinite;
+
+}
+
+.f1{
+  left:8%;
+  bottom:-40px;
+  animation-delay:0s;
+}
+
+.f2{
+  left:22%;
+  bottom:-70px;
+  animation-delay:1.5s;
+}
+
+.f3{
+  left:40%;
+  bottom:-50px;
+  animation-delay:3s;
+}
+
+.f4{
+  left:58%;
+  bottom:-80px;
+  animation-delay:2s;
+}
+
+.f5{
+  left:75%;
+  bottom:-40px;
+  animation-delay:4s;
+}
+
+.f6{
+  left:90%;
+  bottom:-60px;
+  animation-delay:1s;
+}
+
+.f7{
+  left:15%;
+  bottom:-100px;
+  animation-delay:5s;
+}
+
+.f8{
+  left:50%;
+  bottom:-100px;
+  animation-delay:6s;
+}
+
+.f9{
+  left:68%;
+  bottom:-100px;
+  animation-delay:3.5s;
+}
+
+.f10{
+  left:83%;
+  bottom:-100px;
+  animation-delay:7s;
+}
+
+@keyframes floatEmoji{
+
+  0%{
+    transform:
+      translateY(0)
+      rotate(0deg);
+    opacity:0;
+  }
+
+  10%{
+    opacity:.28;
+  }
+
+  50%{
+    transform:
+      translateY(-50vh)
+      rotate(15deg);
+    opacity:.32;
+  }
+
+  100%{
+    transform:
+      translateY(-115vh)
+      rotate(-15deg);
+    opacity:0;
+  }
+
+}
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page{
+
+  display:none;
+
+  min-height:100vh;
+
+  width:100%;
+
+  padding:
+    35px
+    18px;
+
+  align-items:center;
+
+  justify-content:center;
+
+  position:relative;
+
+  z-index:5;
+
 }
 
 .page.active{
+
   display:flex;
+
 }
+
+
+/* =========================
+   GLASS CARD
+========================= */
 
 .card{
-  width:95%;
-  max-width:500px;
-  padding:28px 20px;
+
+  width:min(
+    92%,
+    520px
+  );
+
+  padding:30px 22px;
+
+  border-radius:30px;
+
   text-align:center;
-  border-radius:28px;
-  background:#ffffff18;
-  border:1px solid #ffffff25;
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-  box-shadow:0 20px 60px #00000055;
-  overflow:hidden;
-  animation:cardIn .6s ease;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.16),
+      rgba(255,100,210,.10),
+      rgba(150,70,220,.12)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.30);
+
+  backdrop-filter:
+    blur(22px);
+
+  -webkit-backdrop-filter:
+    blur(22px);
+
+  box-shadow:
+
+    0 25px 80px
+    rgba(0,0,0,.38),
+
+    inset 0 1px 1px
+    rgba(255,255,255,.20);
+
 }
 
-@keyframes cardIn{
-  from{
-    opacity:0;
-    transform:translateY(20px) scale(.97);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0) scale(1);
-  }
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2,
+h3{
+  margin-top:0;
 }
 
 h1{
-  font-size:clamp(26px,7vw,38px);
-  line-height:1.3;
-  margin-bottom:12px;
+
+  font-size:
+    clamp(
+      27px,
+      7vw,
+      42px
+    );
+
 }
 
 h2{
-  font-size:clamp(21px,6vw,30px);
-  line-height:1.4;
-  margin-bottom:15px;
+
+  font-size:
+    clamp(
+      24px,
+      6vw,
+      34px
+    );
+
 }
 
 p{
-  font-size:14px;
-  line-height:1.8;
+
+  line-height:1.7;
+
 }
 
-.input{
-  width:100%;
-  padding:14px;
-  margin:18px 0 10px;
-  border:none;
-  outline:none;
-  border-radius:16px;
-  background:#ffffff18;
-  border:1px solid #ffffff25;
-  color:#fff;
-  font:15px Poppins,sans-serif;
-  text-align:center;
-}
 
-.input::placeholder{
-  color:#ffffff99;
-}
+/* =========================
+   BUTTON
+========================= */
 
 .btn{
+
   border:none;
+
   outline:none;
-  padding:13px 22px;
-  margin:7px 4px;
-  border-radius:999px;
-  color:#fff;
-  background:linear-gradient(135deg,#ff3f9f,#954cff);
-  font:600 14px Poppins,sans-serif;
+
   cursor:pointer;
-  box-shadow:0 8px 28px #ff3caa45;
+
+  color:white;
+
+  font-size:16px;
+
+  font-weight:bold;
+
+  padding:
+    13px
+    24px;
+
+  border-radius:30px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #ff4fb3,
+      #9b45d4
+    );
+
+  box-shadow:
+
+    0 10px 25px
+    rgba(194,60,190,.35),
+
+    inset 0 1px 1px
+    rgba(255,255,255,.30);
+
+  transition:
+    .25s ease;
+
+}
+
+.btn:hover{
+
+  transform:
+    translateY(-2px)
+    scale(1.02);
+
 }
 
 .btn:active{
-  transform:scale(.96);
+
+  transform:
+    scale(.96);
+
 }
 
-.error{
-  min-height:20px;
-  color:#ffb9d9;
-  font-size:13px;
+
+/* =========================
+   WELCOME PAGE
+========================= */
+
+.welcomeTitle{
+
+  font-size:
+    clamp(
+      27px,
+      7vw,
+      38px
+    );
+
+  margin-bottom:12px;
+
+}
+
+.welcomeText{
+
+  font-size:15px;
+
+  line-height:1.7;
+
+  opacity:.92;
+
+  margin-bottom:25px;
+
+}
+
+
+/* =========================
+   BUBBLE BUTTON
+========================= */
+
+.openBubble{
+
+  width:125px;
+
+  height:125px;
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    rgba(255,255,255,.55);
+
+  color:white;
+
+  font-size:17px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  background:
+
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255,255,255,.48),
+      rgba(255,120,220,.24),
+      rgba(145,60,220,.25)
+    );
+
+  backdrop-filter:blur(12px);
+
+  -webkit-backdrop-filter:blur(12px);
+
+  box-shadow:
+
+    0 0 30px
+    rgba(255,100,220,.35),
+
+    inset 0 2px 5px
+    rgba(255,255,255,.30);
+
+  transition:
+    .3s ease;
+
+  animation:
+    bubbleFloat 2.5s ease-in-out infinite;
+
+}
+
+.openBubble:hover{
+
+  transform:
+    scale(1.05);
+
+}
+
+@keyframes bubbleFloat{
+
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+}
+
+.openBubble.burst{
+
+  animation:
+    bubbleBurst .65s ease forwards;
+
+}
+
+@keyframes bubbleBurst{
+
+  0%{
+
+    transform:
+      scale(1);
+
+    opacity:1;
+
+  }
+
+  35%{
+
+    transform:
+      scale(1.12);
+
+    opacity:1;
+
+  }
+
+  100%{
+
+    transform:
+      scale(12);
+
+    opacity:0;
+
+  }
+
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.loginTitle{
+
+  margin-bottom:8px;
+
+}
+
+.loginSub{
+
+  opacity:.85;
+
+  margin-bottom:20px;
+
+}
+
+.input{
+
+  width:100%;
+
+  padding:14px 17px;
+
+  border-radius:18px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.30);
+
+  outline:none;
+
+  color:white;
+
+  font-size:16px;
+
+  background:
+    rgba(255,255,255,.10);
+
+  backdrop-filter:blur(10px);
+
+  -webkit-backdrop-filter:blur(10px);
+
+  margin-bottom:12px;
+
+}
+
+.input::placeholder{
+
+  color:
+    rgba(255,255,255,.65);
+
 }
 
 .hint{
-  margin-top:10px;
-  font-size:12px;
-  opacity:.65;
+
+  font-size:13px;
+
+  opacity:.75;
+
+  margin-bottom:18px;
+
 }
 
-.penguin{
-  display:block;
-  width:min(78vw,310px);
-  max-width:100%;
-  height:auto;
-  max-height:300px;
+.loginError{
+
+  color:#ffb5df;
+
+  font-size:14px;
+
+  font-weight:bold;
+
+  min-height:20px;
+
+  margin-top:12px;
+
+}
+
+
+/* =========================
+   PENGUIN
+========================= */
+
+.penguinGif{
+
+  width:
+    min(230px,75vw);
+
+  max-height:260px;
+
   object-fit:contain;
-  margin:0 auto 18px;
+
   border-radius:20px;
-  filter:drop-shadow(0 15px 25px #00000055);
+
+  margin-bottom:15px;
+
 }
 
-.arrow{
-  font-size:55px;
-  margin:10px 0;
-  animation:bounce 1s infinite;
+.penguinText{
+
+  font-size:23px;
+
+  font-weight:bold;
+
+  margin-bottom:18px;
+
 }
 
-@keyframes bounce{
-  50%{transform:translateY(10px)}
+.sayHello{
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff66c4,
+      #8d4ddd
+    );
+
 }
 
-.count{
-  font-size:clamp(90px,28vw,170px);
-  line-height:1;
-  font-weight:700;
-  color:#ff70b5;
-  text-shadow:0 0 35px #ff46aa99;
-  margin:25px 0;
-  animation:pop .7s ease;
+#penguinContinue{
+
+  display:none;
+
+  margin-top:15px;
+
 }
 
-@keyframes pop{
-  from{
+#penguinContinue.show{
+
+  display:inline-block;
+
+  animation:
+    continueAppear .5s ease;
+
+}
+
+@keyframes continueAppear{
+
+  0%{
+
     opacity:0;
-    transform:scale(1.5);
+
+    transform:
+      translateY(10px)
+      scale(.9);
+
   }
-  to{
+
+  100%{
+
     opacity:1;
-    transform:scale(1);
+
+    transform:
+      translateY(0)
+      scale(1);
+
   }
+
 }
 
-.musicBubble{
-  width:125px;
-  height:125px;
-  margin:25px auto;
+
+/* =========================
+   SOUND PAGE
+========================= */
+
+.soundIcon{
+
+  font-size:55px;
+
+  margin-bottom:15px;
+
+}
+
+.soundTitle{
+
+  font-size:27px;
+
+  margin-bottom:12px;
+
+}
+
+.soundText{
+
+  line-height:1.7;
+
+  opacity:.88;
+
+  margin-bottom:25px;
+
+}
+
+.soundButtons{
+
   display:flex;
-  align-items:center;
+
+  gap:12px;
+
+  flex-wrap:wrap;
+
   justify-content:center;
-  border-radius:50%;
-  font-size:52px;
-  cursor:pointer;
-  background:linear-gradient(135deg,#ff3f9f,#934cff);
-  box-shadow:
-    0 0 0 12px #ff64b414,
-    0 0 50px #ff46b0aa;
-  animation:pulse 1.5s infinite;
+
 }
 
-@keyframes pulse{
-  50%{
-    box-shadow:
-      0 0 0 25px #ff64b405,
-      0 0 75px #ff46b0dd;
-  }
-}
+
+/* =========================
+   BIRTHDAY
+========================= */
 
 .birthdayGif{
-  display:block;
-  width:100%;
-  max-width:100%;
-  height:auto;
-  max-height:320px;
-  object-fit:contain;
-  margin:0 auto 20px;
-  border-radius:20px;
+
+  width:
+    min(280px,80vw);
+
+  border-radius:22px;
+
+  margin-bottom:20px;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.25);
+
 }
 
-.messageBox{
+.birthdayTitle{
+
+  font-size:
+    clamp(
+      27px,
+      7vw,
+      40px
+    );
+
+  margin-bottom:12px;
+
+}
+
+.birthdaySub{
+
+  font-size:16px;
+
+  line-height:1.7;
+
+  opacity:.92;
+
+  margin-bottom:24px;
+
+}
+
+
+/* =========================
+   MESSAGE PAGE
+========================= */
+
+.messageCard{
+
+  max-height:
+    calc(100vh - 45px);
+
+  display:flex;
+
+  flex-direction:column;
+
+  padding:
+    25px 18px;
+
+}
+
+.messageScroll{
+
   width:100%;
-  height:390px;
+
+  height:
+    min(
+      53vh,
+      420px
+    );
+
   overflow-y:auto;
+
+  padding:
+    5px 12px 5px 4px;
+
   text-align:left;
-  padding:18px;
-  border-radius:20px;
-  background:#00000025;
-  border:1px solid #ffffff18;
-  scroll-behavior:smooth;
+
+  border-radius:18px;
+
+  background:
+    rgba(0,0,0,.10);
+
+  border:
+    1px solid
+    rgba(255,255,255,.10);
+
+  scrollbar-width:
+    thin;
+
+  scrollbar-color:
+    rgba(255,255,255,.35)
+    transparent;
+
 }
 
-.messageBox::-webkit-scrollbar{
+.messageScroll::-webkit-scrollbar{
+
   width:5px;
+
 }
 
-.messageBox::-webkit-scrollbar-thumb{
-  background:linear-gradient(#ff3f9f,#954cff);
+.messageScroll::-webkit-scrollbar-thumb{
+
+  background:
+    rgba(255,255,255,.35);
+
   border-radius:10px;
+
 }
 
 .message{
+
+  font-size:15px;
+
+  line-height:1.9;
+
   white-space:pre-line;
-  font-size:14px;
-  line-height:2;
+
+  padding:8px 4px 20px;
+
 }
 
-.messageBtn{
-  opacity:.5;
-  background:linear-gradient(135deg,#555,#777);
-  box-shadow:none;
-}
+.scrollHint{
 
-.messageBtn.ready{
-  opacity:1;
-  background:linear-gradient(135deg,#ff3f9f,#954cff);
-  box-shadow:0 8px 35px #ff3caa80;
-  animation:ready 1.4s infinite;
-}
+  display:inline-block;
 
-@keyframes ready{
-  50%{
-    box-shadow:0 8px 50px #ff3caa;
-  }
-}
-
-.warning{
-  min-height:25px;
-  margin-top:5px;
-  color:#ffd1e8;
-  font-size:14px;
-  font-weight:600;
-  opacity:0;
-}
-
-.warning.show{
-  opacity:1;
-}
-
-.videoBox{
-  width:100%;
-  margin:15px 0 18px;
-  overflow:hidden;
-  border-radius:20px;
-  background:#000;
-}
-
-.videoBox video{
-  display:block;
-  width:100%;
-  max-width:100%;
-  max-height:70vh;
-  height:auto;
-  background:#000;
-}
-
-.heart{
-  position:fixed;
-  bottom:-30px;
-  pointer-events:none;
-  z-index:1;
-  animation:float linear forwards;
-}
-
-@keyframes float{
-  from{
-    transform:translateY(0) rotate(0);
-    opacity:0;
-  }
-  10%{opacity:.7}
-  to{
-    transform:translateY(-110vh) rotate(360deg);
-    opacity:0;
-  }
-}
-
-@media(max-width:600px){
-  .card{
-    padding:25px 17px;
-  }
-
-  .birthdayGif{
-    max-height:280px;
-  }
-}
-</style>
-</head>
+  margin-top:14
+  </head>
 
 <body>
 
-<!-- LOGIN -->
-<section id="loginPage" class="page active">
+
+<!-- =========================
+     FLOATING EMOJIS
+========================= -->
+
+<div class="floating f1">🤍</div>
+<div class="floating f2">🙂‍↔️</div>
+<div class="floating f3">🫶🏻</div>
+<div class="floating f4">💓</div>
+<div class="floating f5">🥰</div>
+<div class="floating f6">🤍</div>
+<div class="floating f7">💓</div>
+<div class="floating f8">🫶🏻</div>
+<div class="floating f9">🥰</div>
+<div class="floating f10">🤍</div>
+
+
+<!-- =========================
+     BACKGROUND MUSIC
+========================= -->
+
+<audio
+  id="backgroundMusic"
+  preload="auto"
+  playsinline
+>
+
+  <source
+    src="https://res.cloudinary.com/s4rjpsff/video/upload/v1788244715/Haareya_Piano_Instrumental___Karaoke_With_Lyrics___Arijit_Singh___Notes___Hindi_Song_Keyboard_256k__1.mp3"
+    type="audio/mpeg"
+  >
+
+</audio>
+
+
+<!-- =========================
+     WELCOME PAGE
+========================= -->
+
+<section
+  id="welcomePage"
+  class="page active"
+>
+
   <div class="card">
-    <h1>Hey Rheet 🤍</h1>
 
-    <p>
-      A little surprise is waiting for you... 🥹
-    </p>
+    <h1 class="welcomeTitle">
+      Welcome to my website page 🤍
+    </h1>
 
-    <input
-      id="password"
-      class="input"
-      type="password"
-      placeholder="Enter password"
+    <div class="welcomeText">
+      Here is a small website created for you... 🥹
+    </div>
+
+    <button
+      id="openBubble"
+      class="openBubble"
+      onclick="openWebsite()"
     >
-
-    <button class="btn" onclick="login()">
-      Open 🤍
+      Open 👐🏻
     </button>
 
-    <div id="loginError" class="error"></div>
-
-    <div class="hint">
-      Hint: RHEET
-    </div>
   </div>
+
 </section>
 
 
-<!-- PENGUIN -->
-<section id="penguinPage" class="page">
+<!-- =========================
+     LOGIN PAGE
+========================= -->
+
+<section
+  id="loginPage"
+  class="page"
+>
+
+  <div class="card">
+
+    <h2 class="loginTitle">
+      Hey Deepika 🤍
+    </h2>
+
+    <input
+      id="passwordInput"
+      class="input"
+      type="password"
+      placeholder="Enter Password 🔑"
+      autocomplete="off"
+    >
+
+    <div class="hint">
+      Hint: BFF 🤍
+    </div>
+
+    <button
+      class="btn"
+      onclick="checkPassword()"
+    >
+      Enter 💗
+    </button>
+
+    <div
+      id="loginError"
+      class="loginError"
+    ></div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PENGUIN PAGE
+========================= -->
+
+<section
+  id="penguinPage"
+  class="page"
+>
+
   <div class="card">
 
     <img
-      class="penguin"
+      class="penguinGif"
       src="https://res.cloudinary.com/s4rjpsff/image/upload/v1790096386/64185b4165d0b-funny-penguin-animated-gifs.gif"
-      alt="Penguin"
+      alt="Funny penguin"
     >
 
-    <h2>Hello Rheet! 🐧🤍</h2>
+    <div class="penguinText">
+      Hello Deepika! 🐧🤍
+    </div>
 
-    <p>
-      This little penguin wants to say something to you... 😭
-    </p>
-
-    <button class="btn" onclick="speakHello()">
+    <button
+      id="sayHelloButton"
+      class="btn sayHello"
+      onclick="speakHelloAndShowContinue()"
+    >
       🔊 Say Hello!
     </button>
 
     <br>
 
-    <button class="btn" onclick="goSound()">
-      Continue 🤍
-    </button>
-
-    <div class="hint">
-      If the voice doesn't play automatically, tap the button above 🔊
-    </div>
-
-  </div>
-</section>
-
-
-<!-- SOUND -->
-<section id="soundPage" class="page">
-  <div class="card">
-
-    <h1>
-      Please increase the sound a little 🔊
-    </h1>
-
-    <div class="arrow">👇🏻</div>
-
-    <p>
-      Turn your volume up a little...
-    </p>
-
-    <br>
-
-    <button class="btn" onclick="startCountdown()">
-      Done 🤘🏻
-    </button>
-
-    <button class="btn" onclick="startCountdown()">
-      Okay 😊
-    </button>
-
-  </div>
-</section>
-
-
-<!-- COUNTDOWN -->
-<section id="countdownPage" class="page">
-  <div class="card">
-
-    <p>
-      Wait a little... 🥹
-    </p>
-
-    <div id="countNumber" class="count">
-      5
-    </div>
-
-    <p>
-      Something special is coming... 🤍
-    </p>
-
-  </div>
-</section>
-
-
-<!-- MUSIC -->
-<section id="musicPage" class="page">
-  <div class="card">
-
-    <h2>
-      Now play the music....🫠
-    </h2>
-
-    <div class="arrow">👇🏻</div>
-
-    <div
-      class="musicBubble"
-      onclick="musicClick(event)"
+    <button
+      id="penguinContinue"
+      class="btn"
+      onclick="goToSoundPage()"
     >
+      Continue 💗
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SOUND PAGE
+========================= -->
+
+<section
+  id="soundPage"
+  class="page"
+>
+
+  <div class="card">
+
+    <div class="soundIcon">
       🔊
     </div>
 
-    <p>
-      Press this bubble 🤍
-    </p>
+    <h2 class="soundTitle">
+      Please increase the sound a little 🔊
+    </h2>
 
-    <div id="musicStatus" class="hint">
-      Pehla Nasha 🎵
+    <div class="soundText">
+      Turn your volume up a little...
+    </div>
+
+    <div class="soundButtons">
+
+      <button
+        class="btn"
+        onclick="startBirthday()"
+      >
+        Done 🤘🏻
+      </button>
+
+      <button
+        class="btn"
+        onclick="startBirthday()"
+      >
+        Okay 😊
+      </button>
+
     </div>
 
   </div>
+
 </section>
 
 
-<!-- BIRTHDAY -->
-<section id="birthdayPage" class="page">
+<!-- =========================
+     BIRTHDAY PAGE
+========================= -->
+
+<section
+  id="birthdayPage"
+  class="page"
+>
+
   <div class="card">
 
     <img
@@ -471,346 +1041,754 @@ p{
       alt="Happy Birthday"
     >
 
-    <h1>
-      Happy Birthday Rheet 🥹🤍
+    <h1 class="birthdayTitle">
+      Happy Birthday Deepika 🥹🤍
     </h1>
 
-    <h2>
+    <div class="birthdaySub">
+
       Wishing you a very Happy Birthday 💛
-    </h2>
 
-    <p>
+      <br>
+
       This little surprise is just for you 🤍
-    </p>
 
-    <br>
+    </div>
 
-    <button class="btn" onclick="showPage('messagePage')">
+    <button
+      class="btn"
+      onclick="openMessagePage()"
+    >
       Continue 💌
     </button>
 
   </div>
+
 </section>
 
 
-<!-- MESSAGE -->
-<section id="messagePage" class="page">
-  <div class="card">
+<!-- =========================
+     MESSAGE PAGE
+========================= -->
+
+<section
+  id="messagePage"
+  class="page"
+>
+
+  <div class="card messageCard">
 
     <h2>
-      A few words for you 🤍
+      Hey best friend... 🤍
     </h2>
 
     <div
-      id="messageBox"
-      class="messageBox"
-      onscroll="checkScroll()"
+      id="messageScroll"
+      class="messageScroll"
+      onscroll="checkMessageScroll()"
     >
 
       <div class="message">
 
-Wishing you a very, very Happy Birthday, Rheet 🤍✨
+Wishing you many many happy returns of the day 🤍🐷
 
-Sometimes I still get a little emotional when I think about how we used to talk so much, tease each other over the smallest and most random things, and once be such a big part of each other's lives.
+Listen, there is no point in writing long paragraphs... but keep some things in mind...
 
-And now we are different.
+We know we don't have a friendship, but there was a time when we had a very close friendship.
 
-Honestly, sometimes that thought hurts a little. Because no matter how much time passes, some people always keep a special place in our hearts.
+We created many best moments 🙂‍↔️ and I know, it will never be possible again.
 
-But today, I only want to wish good things for you.
+But that doesn't mean I will consider you my ex best friend...
 
-I genuinely hope that you go very far in life, achieve all your dreams, and get everything that you truly want.
+Because best friends never become exes.
 
-May your life be filled with success, peace, love and happiness. 🫶🏻
+We will always be best friends.
 
-And bro, please... stop being so sad now. 😭❤️
+Maybe you are not interested in this, but still I will consider you my best friend because you have taught me many lessons that no teacher can teach, not even family can.
 
-Live your life freely.
+That's why you are my first and last best friend forever... 🫶🏻
 
-Enjoy the little things.
+Whatever...
 
-Learn to love life again.
+Stay well.
 
-And most importantly...
+Enjoy your most delicious life.
 
-Stay genuinely happy.
-
-Whatever happened between us or whatever happened along the way, all I want is for you to be genuinely happy again.
-
-I hope that smile on your face always stays there because you truly deserve it. 🤍
-
-No matter how far life takes us from each other, I will always wish good things for you.
-
-Keep growing.
-
-Keep shining.
-
-Keep chasing your dreams.
-
-And yes...
-
-Don't forget to be happy. 🫶🏻
-
-Once again...
-
-Happy happy happy birthday, Rheet. 🥹🤍
-
-May your coming year be filled with lots of happiness.
-
-Lots of beautiful memories.
-
-Lots of success.
-
-And most importantly...
-
-Peace. ✨
-
-Keep growing.
-
-Keep shining.
-
-And please...
-
-Always stay happy. 🤍✨
+Grow a lot in life. 🥰🎂
 
       </div>
+
     </div>
 
-    <div id="warning" class="warning">
-      Scroll down bhai 🫠🙂‍↔️
-    </div>
-
-    <button
-      id="messageBtn"
-      class="btn messageBtn"
-      onclick="messageContinue()"
-    >
-      Continue 💌
-    </button>
-
-  </div>
-</section>
-
-
-<!-- CHOCOLATE -->
-<section id="chocolatePage" class="page">
-  <div class="card">
-
-    <h2>
-      What's your favourite chocolate? 🍫
-    </h2>
-
-    <button
-      class="btn"
-      style="width:90%;max-width:330px"
-      onclick="wrongChocolate()"
-    >
-      💩
-    </button>
-
-    <br>
-
-    <button
-      class="btn"
-      style="width:90%;max-width:330px"
-      onclick="showChocolateInput()"
-    >
-      Something else 🍫
-    </button>
 
     <div
-      id="chocolateArea"
-      style="display:none;margin-top:15px"
+      id="scrollHint"
+      class="scrollHint"
+      onclick="scrollHintError()"
     >
-
-      <input
-        id="chocolateInput"
-        class="input"
-        type="text"
-        placeholder="Write your favourite chocolate..."
-      >
-
-      <button class="btn" onclick="finishChocolate()">
-        Continue 🤍
-      </button>
-
-      <div id="chocolateError" class="error"></div>
-
+      Scroll down 👇🏻
     </div>
 
-  </div>
+
+    <div
+      id="continueMessage"
+
+class="btn"
+
+>
+
+onclick="continue After Message()"
+
+Continue
+
+</button>
+
+</div>
+
 </section>
 
+NOTIFICATION
 
-<!-- VIDEO -->
-<section id="videoPage" class="page">
-  <div class="card">
+<div
 
-    <h2>
-      Just watch this too... 🥹🤍
+id="notificationBackdrop"
+
+></div>
+
+<div
+
+>
+
+id="surprise Notification"
+
+<div class="notificationEmoji">
+
+</div>
+  <div class="notificationTitle">
+
+Wait...
+
+</div>
+
+<div class="notificationText">
+
+One last little surprise is waiting for you...
+
+</div>
+
+</div>
+  <!-- =========================
+     VIDEO PAGE
+========================= -->
+
+<section
+  id="videoPage"
+  class="page"
+>
+
+  <div class="card videoCard">
+
+    <h2 class="videoTitle">
+      A small vdo for u
     </h2>
 
-    <div class="videoBox">
+    <video
+      id="birthdayVideo"
+      playsinline
+      preload="auto"
+      controls
+      controlsList="nodownload"
+    >
 
-      <video
-        id="birthdayVideo"
-        playsinline
-        preload="auto"
-        controls
+      <source
+        src="https://res.cloudinary.com/s4rjpsff/video/upload/v1790493846/InShot_20260901_181719307.mp4"
+        type="video/mp4"
       >
-        <source
-          src="https://res.cloudinary.com/s4rjpsff/video/upload/v1790100963/InShot_20260922_234042635.mp4"
-          type="video/mp4"
-        >
-      </video>
 
-    </div>
-
-    <p>
-      Watch till the end... 🤍
-    </p>
-
-    <div class="hint">
-      The next page will open automatically when the video ends ✨
-    </div>
+    </video>
 
   </div>
+
 </section>
 
 
-<!-- FINAL -->
-<section id="finalPage" class="page">
+<!-- =========================
+     FINAL PAGE
+========================= -->
+
+<section
+  id="finalPage"
+  class="page"
+>
+
   <div class="card">
 
-    <h1>
-      Bye Rheet 🥹💗
+    <h1 class="finalTitle">
+      Bye Deepika 🥹💗
     </h1>
 
-    <p style="font-size:16px">
-      Once again, wishing you a very Happy Birthday Rheet 🎂🤍✨
-    </p>
+    <div class="finalText">
 
-    <br>
+      Once again, wishing you a very Happy Birthday Deepika 🎂🤍✨
 
-    <p>
+      <br><br>
+
       Always keep smiling and always stay happy. 🫶🏻
-    </p>
 
-    <div style="font-size:55px;margin-top:25px">
-      🥹🤍✨
+    </div>
+
+    <div class="lastPrayer">
+
+      I will pray to God that we will always be good friends...🥰🤍
+
     </div>
 
   </div>
+
 </section>
-
-
-<!-- ONLY PEHLA NASHA -->
-<audio id="pehlaNasha" preload="auto">
-  <source
-    src="https://res.cloudinary.com/s4rjpsff/video/upload/v1790101237/AudioCutter_pehla_nasha_indian_hindi_piano_song___piano_cover_pawandeep_Singh_25.mp3"
-    type="audio/mpeg"
-  >
-</audio>
 
 
 <script>
 
+
 /* =========================
-   PAGE
+   PAGE SWITCH
 ========================= */
 
-function showPage(id){
+function showPage(pageId){
 
-  document.querySelectorAll(".page").forEach(function(page){
-    page.classList.remove("active");
-  });
+  const pages =
+    document.querySelectorAll(".page");
 
-  const page=document.getElementById(id);
+  pages.forEach(
+    function(page){
 
-  if(page){
-    page.classList.add("active");
+      page.classList.remove(
+        "active"
+      );
+
+    }
+  );
+
+  const target =
+    document.getElementById(
+      pageId
+    );
+
+  if(target){
+
+    target.classList.add(
+      "active"
+    );
+
+    window.scrollTo(
+      0,
+      0
+    );
+
   }
 
-  window.scrollTo(0,0);
 }
 
 
 /* =========================
-   LOGIN
+   MUSIC + VIDEO
 ========================= */
 
-function login(){
+const music =
+  document.getElementById(
+    "backgroundMusic"
+  );
 
-  const password=
-    document.getElementById("password").value.trim();
+const video =
+  document.getElementById(
+    "birthdayVideo"
+  );
 
-  const error=
-    document.getElementById("loginError");
 
-  if(password==="RHEET"){
+/* =========================
+   BUBBLE POP SOUND
+========================= */
 
-    error.textContent="";
+function bubblePopSound(){
 
-    showPage("penguinPage");
+  try{
 
-    setTimeout(function(){
-      speakHello();
-    },500);
+    const AudioContext =
+      window.AudioContext ||
+      window.webkitAudioContext;
 
-  }else{
+    const ctx =
+      new AudioContext();
 
-    error.textContent=
-      "Wrong password 😭 Try again!";
+    const now =
+      ctx.currentTime;
+
+    const master =
+      ctx.createGain();
+
+    master.gain.setValueAtTime(
+      1.4,
+      now
+    );
+
+    master.gain.exponentialRampToValueAtTime(
+      0.0001,
+      now + 0.55
+    );
+
+    master.connect(
+      ctx.destination
+    );
+
+
+    /* FIRST POP */
+
+    const pop =
+      ctx.createOscillator();
+
+    const popGain =
+      ctx.createGain();
+
+    pop.type =
+      "sine";
+
+    pop.frequency.setValueAtTime(
+      500,
+      now
+    );
+
+    pop.frequency.exponentialRampToValueAtTime(
+      55,
+      now + 0.32
+    );
+
+    popGain.gain.setValueAtTime(
+      0.0001,
+      now
+    );
+
+    popGain.gain.exponentialRampToValueAtTime(
+      1.0,
+      now + 0.015
+    );
+
+    popGain.gain.exponentialRampToValueAtTime(
+      0.0001,
+      now + 0.35
+    );
+
+    pop.connect(
+      popGain
+    );
+
+    popGain.connect(
+      master
+    );
+
+    pop.start(
+      now
+    );
+
+    pop.stop(
+      now + 0.36
+    );
+
+
+    /* CRACK SOUND */
+
+    const crack =
+      ctx.createOscillator();
+
+    const crackGain =
+      ctx.createGain();
+
+    crack.type =
+      "triangle";
+
+    crack.frequency.setValueAtTime(
+      1250,
+      now
+    );
+
+    crack.frequency.exponentialRampToValueAtTime(
+      180,
+      now + 0.18
+    );
+
+    crackGain.gain.setValueAtTime(
+      0.0001,
+      now
+    );
+
+    crackGain.gain.exponentialRampToValueAtTime(
+      0.75,
+      now + 0.008
+    );
+
+    crackGain.gain.exponentialRampToValueAtTime(
+      0.0001,
+      now + 0.2
+    );
+
+    crack.connect(
+      crackGain
+    );
+
+    crackGain.connect(
+      master
+    );
+
+    crack.start(
+      now
+    );
+
+    crack.stop(
+      now + 0.21
+    );
+
+
+    /* SECOND POP */
+
+    const pop2 =
+      ctx.createOscillator();
+
+    const pop2Gain =
+      ctx.createGain();
+
+    pop2.type =
+      "sine";
+
+    pop2.frequency.setValueAtTime(
+      700,
+      now + 0.06
+    );
+
+    pop2.frequency.exponentialRampToValueAtTime(
+      80,
+      now + 0.30
+    );
+
+    pop2Gain.gain.setValueAtTime(
+      0.0001,
+      now
+    );
+
+    pop2Gain.gain.exponentialRampToValueAtTime(
+      0.65,
+      now + 0.07
+    );
+
+    pop2Gain.gain.exponentialRampToValueAtTime(
+      0.0001,
+      now + 0.35
+    );
+
+    pop2.connect(
+      pop2Gain
+    );
+
+    pop2Gain.connect(
+      master
+    );
+
+    pop2.start(
+      now + 0.05
+    );
+
+    pop2.stop(
+      now + 0.36
+    );
+
+
+    /* ECHO */
+
+    const echo =
+      ctx.createOscillator();
+
+    const echoGain =
+      ctx.createGain();
+
+    echo.type =
+      "sine";
+
+    echo.frequency.setValueAtTime(
+      300,
+      now + 0.16
+    );
+
+    echo.frequency.exponentialRampToValueAtTime(
+      70,
+      now + 0.5
+    );
+
+    echoGain.gain.setValueAtTime(
+      0.0001,
+      now
+    );
+
+    echoGain.gain.exponentialRampToValueAtTime(
+      0.35,
+      now + 0.18
+    );
+
+    echoGain.gain.exponentialRampToValueAtTime(
+      0.0001,
+      now + 0.55
+    );
+
+    echo.connect(
+      echoGain
+    );
+
+    echoGain.connect(
+      master
+    );
+
+    echo.start(
+      now + 0.15
+    );
+
+    echo.stop(
+      now + 0.56
+    );
 
   }
+
+  catch(error){
+
+    console.log(
+      "Bubble sound unavailable:",
+      error
+    );
+
+  }
+
 }
 
+
+/* =========================
+   OPEN WEBSITE
+========================= */
+
+function openWebsite(){
+
+  const bubble =
+    document.getElementById(
+      "openBubble"
+    );
+
+  if(
+    bubble.classList.contains(
+      "burst"
+    )
+  ){
+
+    return;
+
+  }
+
+  bubblePopSound();
+
+  bubble.classList.add(
+    "burst"
+  );
+
+  setTimeout(
+    function(){
+
+      showPage(
+        "loginPage"
+      );
+
+      bubble.classList.remove(
+        "burst"
+      );
+
+    },
+    650
+  );
+
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+function checkPassword(){
+
+  const input =
+    document.getElementById(
+      "passwordInput"
+    );
+
+  const error =
+    document.getElementById(
+      "loginError"
+    );
+
+  if(
+    input.value === "BFF"
+  ){
+
+    error.textContent =
+      "";
+
+    showPage(
+      "penguinPage"
+    );
+
+    input.value =
+      "";
+
+  }
+
+  else{
+
+    error.textContent =
+      "Wrong password 🥺 Try again.";
+
+    input.focus();
+
+  }
+
+    }
+    /* =========================
+   ENTER KEY LOGIN
+========================= */
 
 document
-.getElementById("password")
-.addEventListener("keydown",function(e){
+  .getElementById(
+    "passwordInput"
+  )
+  .addEventListener(
+    "keydown",
+    function(event){
 
-  if(e.key==="Enter"){
-    login();
-  }
+      if(
+        event.key === "Enter"
+      ){
 
-});
+        checkPassword();
+
+      }
+
+    }
+  );
 
 
 /* =========================
-   VOICE
+   PENGUIN TTS
 ========================= */
 
-function speakHello(){
+function speakHelloAndShowContinue(){
 
-  if(!("speechSynthesis" in window)){
+  const continueButton =
+    document.getElementById(
+      "penguinContinue"
+    );
+
+  continueButton.classList.remove(
+    "show"
+  );
+
+  if(
+    !(
+      "speechSynthesis"
+      in window
+    )
+  ){
+
+    continueButton.classList.add(
+      "show"
+    );
+
     return;
+
   }
 
   speechSynthesis.cancel();
+
   speechSynthesis.resume();
 
-  const voice=
-    new SpeechSynthesisUtterance("Hello Rheet!");
+  const voice =
+    new SpeechSynthesisUtterance(
+      "Hello Deepika!"
+    );
 
-  voice.lang="en-US";
-  voice.rate=.85;
-  voice.pitch=1.15;
-  voice.volume=1;
+  voice.lang =
+    "en-US";
 
-  const voices=speechSynthesis.getVoices();
+  voice.rate =
+    0.78;
 
-  const english=
-    voices.find(function(v){
-      return v.lang &&
-        v.lang.toLowerCase().startsWith("en");
-    });
+  voice.pitch =
+    1.05;
 
-  if(english){
-    voice.voice=english;
+  voice.volume =
+    1.0;
+
+
+  const voices =
+    speechSynthesis.getVoices();
+
+  const englishVoice =
+    voices.find(
+      function(v){
+
+        return v.lang &&
+          v.lang
+            .toLowerCase()
+            .startsWith("en");
+
+      }
+    );
+
+
+  if(
+    englishVoice
+  ){
+
+    voice.voice =
+      englishVoice;
+
   }
 
-  speechSynthesis.speak(voice);
+
+  speechSynthesis.speak(
+    voice
+  );
+
+
+  voice.onstart =
+    function(){
+
+      setTimeout(
+        function(){
+
+          continueButton.classList.add(
+            "show"
+          );
+
+        },
+        400
+      );
+
+    };
+
+
+  setTimeout(
+    function(){
+
+      continueButton.classList.add(
+        "show"
+      );
+
+    },
+    1500
+  );
+
 }
 
 
@@ -818,396 +1796,446 @@ function speakHello(){
    SOUND PAGE
 ========================= */
 
-function goSound(){
+function goToSoundPage(){
 
-  if("speechSynthesis" in window){
-    speechSynthesis.cancel();
-  }
-
-  showPage("soundPage");
-}
-
-
-/* =========================
-   TICK SOUND
-========================= */
-
-function playTick(){
-
-  try{
-
-    const AudioContext=
-      window.AudioContext ||
-      window.webkitAudioContext;
-
-    if(!AudioContext){
-      return;
-    }
-
-    const ctx=new AudioContext();
-
-    const oscillator=ctx.createOscillator();
-
-    const gain=ctx.createGain();
-
-    oscillator.type="sine";
-
-    oscillator.frequency.value=850;
-
-    gain.gain.setValueAtTime(
-      .0001,
-      ctx.currentTime
-    );
-
-    gain.gain.exponentialRampToValueAtTime(
-      .35,
-      ctx.currentTime+.01
-    );
-
-    gain.gain.exponentialRampToValueAtTime(
-      .0001,
-      ctx.currentTime+.11
-    );
-
-    oscillator.connect(gain);
-
-    gain.connect(ctx.destination);
-
-    oscillator.start();
-
-    oscillator.stop(
-      ctx.currentTime+.12
-    );
-
-  }catch(e){
-
-    console.log(e);
-
-  }
-}
-
-
-/* =========================
-   MUSIC
-========================= */
-
-const music=
-  document.getElementById("pehlaNasha");
-
-music.volume=1;
-
-function startMusic(){
-
-  if(!music.paused){
-    return;
-  }
-
-  music.play()
-  .then(function(){
-
-    document.getElementById("musicStatus").textContent=
-      "Pehla Nasha is playing 🎵🤍";
-
-  })
-  .catch(function(){
-
-    document.getElementById("musicStatus").textContent=
-      "Tap the 🔊 bubble to play Pehla Nasha 🎵";
-
-  });
-}
-
-
-/* =========================
-   COUNTDOWN
-========================= */
-
-let countdownStarted=false;
-
-function startCountdown(){
-
-  if(countdownStarted){
-    return;
-  }
-
-  countdownStarted=true;
-
-  music.pause();
-  music.currentTime=0;
-
-  showPage("countdownPage");
-
-  let number=5;
-
-  const display=
-    document.getElementById("countNumber");
-
-  display.textContent=number;
-
-  playTick();
-
-  const timer=setInterval(function(){
-
-    number--;
-
-    if(number>=1){
-
-      display.textContent=number;
-
-      display.style.animation="none";
-
-      void display.offsetWidth;
-
-      display.style.animation="pop .7s ease";
-
-      playTick();
-
-    }else{
-
-      clearInterval(timer);
-
-      countdownStarted=false;
-
-      display.textContent="🎉";
-
-      showPage("musicPage");
-
-      startMusic();
-
-    }
-
-  },1000);
-}
-
-
-/* =========================
-   MUSIC BUBBLE
-========================= */
-
-function musicClick(e){
-
-  const burst=
-    document.createElement("div");
-
-  burst.className="burst";
-
-  burst.style.left=e.clientX+"px";
-  burst.style.top=e.clientY+"px";
-
-  document.body.appendChild(burst);
-
-  setTimeout(function(){
-    burst.remove();
-  },700);
-
-  music.play()
-  .then(function(){
-
-    document.getElementById("musicStatus").textContent=
-      "Pehla Nasha is playing 🎵🤍";
-
-    setTimeout(function(){
-      showPage("birthdayPage");
-    },350);
-
-  })
-  .catch(function(){
-
-    document.getElementById("musicStatus").textContent=
-      "Tap the 🔊 bubble again 🎵";
-
-  });
-}
-
-
-/* =========================
-   MESSAGE
-========================= */
-
-let messageRead=false;
-
-function checkScroll(){
-
-  const box=
-    document.getElementById("messageBox");
-
-  const button=
-    document.getElementById("messageBtn");
-
-  if(
-    box.scrollTop+
-    box.clientHeight >=
-    box.scrollHeight-8
-  ){
-
-    messageRead=true;
-
-    button.classList.add("ready");
-
-  }
-}
-
-
-function messageContinue(){
-
-  const warning=
-    document.getElementById("warning");
-
-  if(!messageRead){
-
-    warning.classList.remove("show");
-
-    void warning.offsetWidth;
-
-    warning.classList.add("show");
-
-    document
-      .getElementById("messageBox")
-      .scrollBy({
-        top:140,
-        behavior:"smooth"
-      });
-
-    return;
-  }
-
-  showPage("chocolatePage");
-}
-
-
-/* =========================
-   CHOCOLATE
-========================= */
-
-function wrongChocolate(){
-
-  alert(
-    "Seriously? 💩😂 Try the other option!"
+  showPage(
+    "soundPage"
   );
 
 }
 
 
-function showChocolateInput(){
+/* =========================
+   START BIRTHDAY
+========================= */
 
-  document.getElementById("chocolateArea")
-    .style.display="block";
+function startBirthday(){
 
-}
+  music.volume =
+    1.0;
 
+  music.currentTime =
+    0;
 
-function finishChocolate(){
+  const promise =
+    music.play();
 
-  const value=
-    document
-      .getElementById("chocolateInput")
-      .value.trim();
+  if(
+    promise !== undefined
+  ){
 
-  const error=
-    document.getElementById("chocolateError");
+    promise.catch(
+      function(error){
 
-  if(!value){
+        console.log(
+          "Haareya play error:",
+          error
+        );
 
-    error.textContent=
-      "Write something first 😭🍫";
+      }
+    );
 
-    return;
   }
 
-  error.textContent="";
+  showPage(
+    "birthdayPage"
+  );
 
-  showPage("videoPage");
-
-  setTimeout(function(){
-    startVideo();
-  },300);
 }
 
 
 /* =========================
-   VIDEO
+   MESSAGE PAGE
 ========================= */
 
-const video=
-  document.getElementById("birthdayVideo");
+function openMessagePage(){
+
+  showPage(
+    "messagePage"
+  );
+
+  const button =
+    document.getElementById(
+      "continueMessage"
+    );
+
+  const hint =
+    document.getElementById(
+      "scrollHint"
+    );
+
+  const error =
+    document.getElementById(
+      "scrollError"
+    );
+
+  const box =
+    document.getElementById(
+      "messageScroll"
+    );
 
 
-function startVideo(){
+  button.classList.remove(
+    "show"
+  );
 
-  /*
-    Pause Pehla Nasha.
+  button.style.display =
+    "none";
 
-    IMPORTANT:
-    We DO NOT reset music.currentTime.
-  */
+
+  hint.style.display =
+    "inline-block";
+
+
+  error.classList.remove(
+    "show"
+  );
+
+
+  box.scrollTop =
+    0;
+
+}
+
+
+/* =========================
+   MESSAGE SCROLL CHECK
+========================= */
+
+function checkMessageScroll(){
+
+  const box =
+    document.getElementById(
+      "messageScroll"
+    );
+
+  const button =
+    document.getElementById(
+      "continueMessage"
+    );
+
+  const hint =
+    document.getElementById(
+      "scrollHint"
+    );
+
+  const error =
+    document.getElementById(
+      "scrollError"
+    );
+
+
+  const currentScroll =
+    box.scrollTop;
+
+  const maxScroll =
+    box.scrollHeight -
+    box.clientHeight;
+
+
+  const userHasScrolled =
+    currentScroll > 10;
+
+
+  const reachedBottom =
+    currentScroll >=
+    maxScroll - 10;
+
+
+  if(
+    userHasScrolled &&
+    reachedBottom
+  ){
+
+    hint.style.display =
+      "none";
+
+    error.classList.remove(
+      "show"
+    );
+
+    button.style.display =
+      "inline-block";
+
+    button.classList.add(
+      "show"
+    );
+
+  }
+
+  else{
+
+    hint.style.display =
+      "inline-block";
+
+    button.classList.remove(
+      "show"
+    );
+
+    button.style.display =
+      "none";
+
+  }
+
+}
+
+
+/* =========================
+   SCROLL HINT CLICK
+========================= */
+
+function scrollHintError(){
+
+  const error =
+    document.getElementById(
+      "scrollError"
+    );
+
+  error.classList.remove(
+    "show"
+  );
+
+  void error.offsetWidth;
+
+  error.classList.add(
+    "show"
+  );
+
+}
+
+
+/* =========================
+   NOTIFICATION
+========================= */
+
+function showSurpriseNotification(){
+
+  const backdrop =
+    document.getElementById(
+      "notificationBackdrop"
+    );
+
+  const notification =
+    document.getElementById(
+      "surpriseNotification"
+    );
+
+
+  backdrop.classList.add(
+    "show"
+  );
+
+  notification.classList.add(
+    "show"
+  );
+
+  notification.classList.add(
+    "notificationPop"
+  );
+
+}
+
+
+function hideSurpriseNotification(){
+
+  const backdrop =
+    document.getElementById(
+      "notificationBackdrop"
+    );
+
+  const notification =
+    document.getElementById(
+      "surpriseNotification"
+    );
+
+
+  notification.classList.remove(
+    "show"
+  );
+
+  notification.classList.remove(
+    "notificationPop"
+  );
+
+  backdrop.classList.remove(
+    "show"
+  );
+
+      }
+      /* =========================
+   CONTINUE AFTER MESSAGE
+========================= */
+
+function continueAfterMessage(){
+
+  const button =
+    document.getElementById(
+      "continueMessage"
+    );
+
+
+  if(
+    !button.classList.contains(
+      "show"
+    )
+  ){
+
+    return;
+
+  }
+
+
+  showSurpriseNotification();
+
+
+  setTimeout(
+    function(){
+
+      hideSurpriseNotification();
+
+      openVideoPage();
+
+    },
+    1400
+  );
+
+}
+
+
+/* =========================
+   VIDEO PAGE
+========================= */
+
+function openVideoPage(){
 
   music.pause();
 
-  video.play()
-  .catch(function(e){
-    console.log("Video autoplay blocked:",e);
-  });
+  showPage(
+    "videoPage"
+  );
+
+  video.currentTime =
+    0;
+
+
+  setTimeout(
+    function(){
+
+      const promise =
+        video.play();
+
+
+      if(
+        promise !== undefined
+      ){
+
+        promise.catch(
+          function(error){
+
+            console.log(
+              "Video autoplay blocked:",
+              error
+            );
+
+          }
+        );
+
+      }
+
+    },
+    250
+  );
+
 }
-
-
-video.addEventListener("ended",function(){
-
-  /*
-    Resume the song from exactly
-    where it was paused.
-  */
-
-  music.play()
-  .catch(function(e){
-    console.log("Music resume blocked:",e);
-  });
-
-  showPage("finalPage");
-
-});
 
 
 /* =========================
-   FLOATING HEARTS
+   VIDEO PLAY
 ========================= */
 
-function createHeart(){
+video.addEventListener(
+  "play",
+  function(){
 
-  const heart=
-    document.createElement("div");
+    music.pause();
 
-  heart.className="heart";
+  }
+);
 
-  const list=[
-    "🤍",
-    "💗",
-    "💖",
-    "💕",
-    "✨"
-  ];
 
-  heart.textContent=
-    list[Math.floor(Math.random()*list.length)];
+/* =========================
+   VIDEO ENDED
+========================= */
 
-  heart.style.left=
-    Math.random()*100+"vw";
+video.addEventListener(
+  "ended",
+  function(){
 
-  heart.style.fontSize=
-    12+Math.random()*18+"px";
+    music.volume =
+      1.0;
 
-  heart.style.animationDuration=
-    5+Math.random()*5+"s";
 
-  document.body.appendChild(heart);
+    const promise =
+      music.play();
 
-  setTimeout(function(){
-    heart.remove();
-  },10000);
-}
 
-setInterval(createHeart,700);
+    if(
+      promise !== undefined
+    ){
+
+      promise.catch(
+        function(error){
+
+          console.log(
+            "Haareya resume error:",
+            error
+          );
+
+        }
+      );
+
+    }
+
+
+    setTimeout(
+      function(){
+
+        showPage(
+          "finalPage"
+        );
+
+      },
+      350
+    );
+
+  }
+);
+
+
+/* =========================
+   VIDEO PAUSE
+========================= */
+
+video.addEventListener(
+  "pause",
+  function(){
+
+    if(
+      !video.ended
+    ){
+
+      music.pause();
+
+    }
+
+  }
+);
 
 </script>
 
 </body>
+
 </html>
+      
+
+  
