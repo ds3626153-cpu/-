@@ -6,44 +6,102 @@
 <title>For Deepika 💗</title>
 
 <style>
-
 *{
-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 html,body{
-margin:0;
-padding:0;
-min-height:100%;
+  margin:0;
+  padding:0;
+  min-height:100%;
 }
 
 body{
-min-height:100vh;
-font-family:Arial,sans-serif;
-color:white;
-overflow-x:hidden;
-background:
-radial-gradient(
-circle at 15% 0%,
-#9b45c6 0%,
-#681d88 25%,
-#35004f 52%,
-#22002f 68%,
-#c52f83 100%
-);
-background-attachment:fixed;
+  min-height:100vh;
+  font-family:Arial,sans-serif;
+  color:white;
+  overflow-x:hidden;
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      #9b45c6 0%,
+      #681d88 25%,
+      #35004f 52%,
+      #22002f 68%,
+      #c52f83 100%
+    );
+  background-attachment:fixed;
+}
+
+.page{
+  display:none;
+  min-height:100vh;
+  width:100%;
+  padding:25px 15px;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  z-index:5;
+}
+
+.page.active{
+  display:flex;
+}
+
+.card{
+  width:min(92%,520px);
+  padding:30px 22px;
+  border-radius:30px;
+  text-align:center;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.16),
+      rgba(255,100,210,.10),
+      rgba(150,70,220,.12)
+    );
+  border:1px solid rgba(255,255,255,.30);
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.38),
+    inset 0 1px 1px rgba(255,255,255,.20);
+}
+
+h1,h2{
+  margin-top:0;
+}
+
+.btn{
+  border:none;
+  outline:none;
+  cursor:pointer;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  padding:13px 24px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff4fb3,#9b45d4);
+  box-shadow:
+    0 10px 25px rgba(194,60,190,.35),
+    inset 0 1px 1px rgba(255,255,255,.30);
+  transition:.25s ease;
+}
+
+.btn:active{
+  transform:scale(.95);
 }
 
 .floating{
-position:fixed;
-z-index:2;
-pointer-events:none;
-opacity:.28;
-font-size:25px;
-animation:floatEmoji 8s linear infinite;
+  position:fixed;
+  z-index:2;
+  pointer-events:none;
+  opacity:.28;
+  font-size:25px;
+  animation:floatEmoji 8s linear infinite;
 }
 
-.f1{left:8%;bottom:-40px;animation-delay:0s}
+.f1{left:8%;bottom:-40px}
 .f2{left:22%;bottom:-70px;animation-delay:1.5s}
 .f3{left:40%;bottom:-50px;animation-delay:3s}
 .f4{left:58%;bottom:-80px;animation-delay:2s}
@@ -55,511 +113,406 @@ animation:floatEmoji 8s linear infinite;
 .f10{left:83%;bottom:-100px;animation-delay:7s}
 
 @keyframes floatEmoji{
-0%{transform:translateY(0) rotate(0);opacity:0}
-10%{opacity:.28}
-50%{transform:translateY(-50vh) rotate(15deg);opacity:.32}
-100%{transform:translateY(-115vh) rotate(-15deg);opacity:0}
-}
-
-.page{
-display:none;
-min-height:100vh;
-width:100%;
-padding:35px 18px;
-align-items:center;
-justify-content:center;
-position:relative;
-z-index:5;
-}
-
-.page.active{
-display:flex;
-}
-
-.card{
-width:min(92%,520px);
-padding:30px 22px;
-border-radius:30px;
-text-align:center;
-background:
-linear-gradient(
-135deg,
-rgba(255,255,255,.16),
-rgba(255,100,210,.10),
-rgba(150,70,220,.12)
-);
-border:1px solid rgba(255,255,255,.30);
-backdrop-filter:blur(22px);
--webkit-backdrop-filter:blur(22px);
-box-shadow:
-0 25px 80px rgba(0,0,0,.38),
-inset 0 1px 1px rgba(255,255,255,.20);
-}
-
-h1,h2,h3{
-margin-top:0;
-}
-
-h1{
-font-size:clamp(27px,7vw,42px);
-}
-
-h2{
-font-size:clamp(24px,6vw,34px);
-}
-
-p{
-line-height:1.7;
-}
-
-.btn{
-border:none;
-outline:none;
-cursor:pointer;
-color:white;
-font-size:16px;
-font-weight:bold;
-padding:13px 24px;
-border-radius:30px;
-background:
-linear-gradient(
-135deg,
-#ff4fb3,
-#9b45d4
-);
-box-shadow:
-0 10px 25px rgba(194,60,190,.35),
-inset 0 1px 1px rgba(255,255,255,.30);
-transition:.25s ease;
-}
-
-.btn:hover{
-transform:translateY(-2px) scale(1.02);
-}
-
-.btn:active{
-transform:scale(.96);
+  0%{
+    transform:translateY(0);
+    opacity:0;
+  }
+  10%{opacity:.28}
+  50%{
+    transform:translateY(-50vh) rotate(15deg);
+    opacity:.32;
+  }
+  100%{
+    transform:translateY(-115vh) rotate(-15deg);
+    opacity:0;
+  }
 }
 
 .welcomeTitle{
-font-size:clamp(27px,7vw,38px);
-margin-bottom:12px;
+  font-size:clamp(27px,7vw,38px);
+  margin-bottom:12px;
 }
 
 .welcomeText{
-font-size:15px;
-line-height:1.7;
-opacity:.92;
-margin-bottom:25px;
+  font-size:15px;
+  line-height:1.7;
+  opacity:.92;
+  margin-bottom:25px;
 }
 
 .openBubble{
-width:125px;
-height:125px;
-border-radius:50%;
-border:1px solid rgba(255,255,255,.55);
-color:white;
-font-size:17px;
-font-weight:bold;
-cursor:pointer;
-background:
-radial-gradient(
-circle at 30% 25%,
-rgba(255,255,255,.48),
-rgba(255,120,220,.24),
-rgba(145,60,220,.25)
-);
-backdrop-filter:blur(12px);
--webkit-backdrop-filter:blur(12px);
-box-shadow:
-0 0 30px rgba(255,100,220,.35),
-inset 0 2px 5px rgba(255,255,255,.30);
-transition:.3s ease;
-animation:bubbleFloat 2.5s ease-in-out infinite;
-}
-
-.openBubble:hover{
-transform:scale(1.05);
-}
-
-@keyframes bubbleFloat{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-8px)}
+  width:125px;
+  height:125px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.55);
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255,255,255,.48),
+      rgba(255,120,220,.24),
+      rgba(145,60,220,.25)
+    );
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  box-shadow:
+    0 0 30px rgba(255,100,220,.35),
+    inset 0 2px 5px rgba(255,255,255,.30);
+  animation:bubbleFloat 2.5s ease-in-out infinite;
 }
 
 .openBubble.burst{
-animation:bubbleBurst .65s ease forwards;
+  animation:bubbleBurst .65s ease forwards;
+}
+
+@keyframes bubbleFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
 }
 
 @keyframes bubbleBurst{
-0%{transform:scale(1);opacity:1}
-35%{transform:scale(1.12);opacity:1}
-100%{transform:scale(12);opacity:0}
+  0%{
+    transform:scale(1);
+    opacity:1;
+  }
+  35%{
+    transform:scale(1.12);
+    opacity:1;
+  }
+  100%{
+    transform:scale(12);
+    opacity:0;
+  }
 }
 
 .loginTitle{
-margin-bottom:8px;
+  margin-bottom:15px;
 }
 
 .input{
-width:100%;
-padding:14px 17px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.30);
-outline:none;
-color:white;
-font-size:16px;
-background:rgba(255,255,255,.10);
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
-margin-bottom:12px;
+  width:100%;
+  padding:14px 17px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.30);
+  outline:none;
+  color:white;
+  font-size:16px;
+  background:rgba(255,255,255,.10);
+  margin-bottom:12px;
 }
 
 .input::placeholder{
-color:rgba(255,255,255,.65);
+  color:rgba(255,255,255,.65);
 }
 
 .hint{
-font-size:13px;
-opacity:.75;
-margin-bottom:18px;
+  font-size:13px;
+  opacity:.75;
+  margin-bottom:18px;
 }
 
 .loginError{
-color:#ffb5df;
-font-size:14px;
-font-weight:bold;
-min-height:20px;
-margin-top:12px;
+  color:#ffb5df;
+  font-size:14px;
+  font-weight:bold;
+  min-height:20px;
+  margin-top:12px;
 }
-
-.penguinGif{
-width:min(230px,75vw);
-max-height:260px;
-object-fit:contain;
-border-radius:20px;
-margin-bottom:15px;
+  .penguinGif{
+  width:min(230px,75vw);
+  max-height:260px;
+  object-fit:contain;
+  border-radius:20px;
+  margin-bottom:15px;
 }
 
 .penguinText{
-font-size:23px;
-font-weight:bold;
-margin-bottom:18px;
-}
-
-.sayHello{
-background:linear-gradient(135deg,#ff66c4,#8d4ddd);
+  font-size:23px;
+  font-weight:bold;
+  margin-bottom:18px;
 }
 
 #penguinContinue{
-display:none;
-margin-top:15px;
+  display:none;
+  margin-top:15px;
 }
 
 #penguinContinue.show{
-display:inline-block;
-animation:continueAppear .5s ease;
+  display:inline-block;
+  animation:continueAppear .5s ease;
 }
 
 @keyframes continueAppear{
-0%{opacity:0;transform:translateY(10px) scale(.9)}
-100%{opacity:1;transform:translateY(0) scale(1)}
+  0%{
+    opacity:0;
+    transform:translateY(10px) scale(.9);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
 }
 
 .soundIcon{
-font-size:55px;
-margin-bottom:15px;
+  font-size:55px;
+  margin-bottom:15px;
 }
 
 .soundTitle{
-font-size:27px;
-margin-bottom:12px;
+  font-size:27px;
+  margin-bottom:12px;
 }
 
 .soundText{
-line-height:1.7;
-opacity:.88;
-margin-bottom:25px;
+  line-height:1.7;
+  opacity:.88;
+  margin-bottom:25px;
 }
 
 .soundButtons{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-justify-content:center;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 .birthdayGif{
-width:min(280px,80vw);
-border-radius:22px;
-margin-bottom:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.25);
+  width:min(280px,80vw);
+  border-radius:22px;
+  margin-bottom:20px;
 }
 
 .birthdayTitle{
-font-size:clamp(27px,7vw,40px);
-margin-bottom:12px;
+  font-size:clamp(27px,7vw,40px);
+  margin-bottom:12px;
 }
 
 .birthdaySub{
-font-size:16px;
-line-height:1.7;
-opacity:.92;
-margin-bottom:24px;
+  font-size:16px;
+  line-height:1.7;
+  opacity:.92;
+  margin-bottom:24px;
 }
-  .messageCard{
-max-height:calc(100vh - 45px);
-display:flex;
-flex-direction:column;
-padding:25px 18px;
+
+.messageCard{
+  max-height:calc(100vh - 35px);
+  display:flex;
+  flex-direction:column;
+  padding:25px 18px;
 }
 
 .messageScroll{
-width:100%;
-height:min(53vh,420px);
-overflow-y:auto;
-padding:5px 12px 5px 4px;
-text-align:left;
-border-radius:18px;
-background:rgba(0,0,0,.10);
-border:1px solid rgba(255,255,255,.10);
-scrollbar-width:thin;
-scrollbar-color:rgba(255,255,255,.35) transparent;
-}
-
-.messageScroll::-webkit-scrollbar{
-width:5px;
-}
-
-.messageScroll::-webkit-scrollbar-thumb{
-background:rgba(255,255,255,.35);
-border-radius:10px;
+  width:100%;
+  height:min(53vh,420px);
+  overflow-y:auto;
+  padding:5px 12px 5px 4px;
+  text-align:left;
+  border-radius:18px;
+  background:rgba(0,0,0,.10);
+  border:1px solid rgba(255,255,255,.10);
 }
 
 .message{
-font-size:15px;
-line-height:1.9;
-white-space:pre-line;
-padding:8px 4px 20px;
+  font-size:15px;
+  line-height:1.9;
+  white-space:pre-line;
+  padding:8px 4px 20px;
 }
 
 .scrollHint{
-display:inline-block;
-margin-top:14px;
-padding:9px 17px;
-border-radius:25px;
-font-size:14px;
-font-weight:bold;
-color:#fff;
-background:
-linear-gradient(
-135deg,
-rgba(255,92,205,.28),
-rgba(143,74,225,.30)
-);
-border:1px solid rgba(255,255,255,.35);
-box-shadow:
-0 0 18px rgba(221,88,220,.30),
-inset 0 1px 1px rgba(255,255,255,.25);
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
-animation:scrollHighlight 1.6s ease-in-out infinite;
-cursor:pointer;
-user-select:none;
+  display:inline-block;
+  margin-top:14px;
+  padding:9px 17px;
+  border-radius:25px;
+  font-size:14px;
+  font-weight:bold;
+  color:white;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,92,205,.28),
+      rgba(143,74,225,.30)
+    );
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:
+    0 0 18px rgba(221,88,220,.30),
+    inset 0 1px 1px rgba(255,255,255,.25);
+  animation:scrollHighlight 1.6s ease-in-out infinite;
+  cursor:pointer;
+  user-select:none;
 }
 
 @keyframes scrollHighlight{
-0%,100%{
-transform:translateY(0);
-box-shadow:
-0 0 14px rgba(221,88,220,.25),
-inset 0 1px 1px rgba(255,255,255,.25);
-}
-50%{
-transform:translateY(6px);
-box-shadow:
-0 0 28px rgba(239,100,226,.55),
-inset 0 1px 1px rgba(255,255,255,.35);
-}
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(6px);
+  }
 }
 
 .scrollError{
-display:none;
-margin-top:8px;
-color:#ffb5df;
-font-size:13px;
-font-weight:bold;
+  display:none;
+  margin-top:8px;
+  color:#ffb5df;
+  font-size:13px;
+  font-weight:bold;
 }
 
 .scrollError.show{
-display:block;
-animation:scrollErrorPop .35s ease;
+  display:block;
+  animation:scrollErrorPop .35s ease;
 }
 
 @keyframes scrollErrorPop{
-0%{
-opacity:0;
-transform:translateY(-5px);
-}
-100%{
-opacity:1;
-transform:translateY(0);
-}
+  0%{
+    opacity:0;
+    transform:translateY(-5px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 #continueMessage{
-display:none;
-margin-top:14px;
+  display:none;
+  margin-top:14px;
 }
 
 #continueMessage.show{
-display:inline-block;
-animation:continueAppear .5s ease;
+  display:inline-block;
+  animation:continueAppear .5s ease;
 }
-
-#notificationBackdrop{
-position:fixed;
-inset:0;
-background:rgba(20,5,30,.28);
-backdrop-filter:blur(4px);
--webkit-backdrop-filter:blur(4px);
-opacity:0;
-visibility:hidden;
-transition:.3s;
-z-index:9998;
+  #notificationBackdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(20,5,30,.28);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:9998;
 }
 
 #notificationBackdrop.show{
-opacity:1;
-visibility:visible;
+  opacity:1;
+  visibility:visible;
 }
 
 #surpriseNotification{
-position:fixed;
-left:50%;
-top:50%;
-transform:translate(-50%,-50%) scale(.7);
-width:min(88%,390px);
-padding:25px 22px;
-border-radius:25px;
-background:
-linear-gradient(
-135deg,
-rgba(255,255,255,.22),
-rgba(174,71,204,.18),
-rgba(255,72,157,.13)
-);
-border:1px solid rgba(255,255,255,.35);
-backdrop-filter:blur(22px);
--webkit-backdrop-filter:blur(22px);
-box-shadow:
-0 25px 80px rgba(0,0,0,.45),
-inset 0 1px 1px rgba(255,255,255,.25);
-text-align:center;
-opacity:0;
-visibility:hidden;
-z-index:9999;
-transition:
-opacity .35s ease,
-transform .4s cubic-bezier(.17,.89,.32,1.28);
+  position:fixed;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%) scale(.7);
+  width:min(88%,390px);
+  padding:25px 22px;
+  border-radius:25px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.22),
+      rgba(174,71,204,.18),
+      rgba(255,72,157,.13)
+    );
+  border:1px solid rgba(255,255,255,.35);
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.45),
+    inset 0 1px 1px rgba(255,255,255,.25);
+  text-align:center;
+  opacity:0;
+  visibility:hidden;
+  z-index:9999;
+  transition:
+    opacity .35s ease,
+    transform .4s ease;
 }
 
 #surpriseNotification.show{
-opacity:1;
-visibility:visible;
-transform:translate(-50%,-50%) scale(1);
+  opacity:1;
+  visibility:visible;
+  transform:translate(-50%,-50%) scale(1);
 }
 
 .notificationEmoji{
-font-size:35px;
-margin-bottom:8px;
+  font-size:35px;
+  margin-bottom:8px;
 }
 
 .notificationTitle{
-font-size:22px;
-font-weight:bold;
-margin-bottom:8px;
+  font-size:22px;
+  font-weight:bold;
+  margin-bottom:8px;
 }
 
 .notificationText{
-font-size:14px;
-line-height:1.6;
-opacity:.9;
-}
-
-.notificationPop{
-animation:notificationPop .45s ease;
-}
-
-@keyframes notificationPop{
-0%{
-transform:translate(-50%,-50%) scale(.65) rotate(-2deg);
-}
-65%{
-transform:translate(-50%,-50%) scale(1.06) rotate(1deg);
-}
-100%{
-transform:translate(-50%,-50%) scale(1) rotate(0);
-}
+  font-size:14px;
+  line-height:1.6;
+  opacity:.9;
 }
 
 .videoCard{
-width:min(95%,650px);
+  width:min(95%,650px);
 }
 
 .videoTitle{
-font-size:clamp(25px,6vw,34px);
-margin-bottom:20px;
+  font-size:clamp(25px,6vw,34px);
+  margin-bottom:20px;
 }
 
 #birthdayVideo{
-width:100%;
-max-height:70vh;
-border-radius:20px;
-background:black;
-display:block;
+  width:100%;
+  max-height:70vh;
+  border-radius:20px;
+  background:black;
+  display:block;
 }
 
 .finalTitle{
-font-size:clamp(28px,7vw,42px);
-margin-bottom:15px;
+  font-size:clamp(28px,7vw,42px);
+  margin-bottom:15px;
 }
 
 .finalText{
-line-height:1.8;
-font-size:16px;
+  line-height:1.8;
+  font-size:16px;
 }
 
 .lastPrayer{
-margin-top:20px;
-color:#c58cff;
-font-size:16px;
-font-weight:bold;
-line-height:1.7;
-text-shadow:0 2px 12px rgba(170,80,255,.25);
+  margin-top:20px;
+  color:#c58cff;
+  font-size:16px;
+  font-weight:bold;
+  line-height:1.7;
+  text-shadow:0 2px 12px rgba(170,80,255,.25);
 }
 
 @media(max-width:480px){
+  .page{
+    padding:20px 10px;
+  }
 
-.page{
-padding:22px 12px;
-}
+  .card{
+    padding:25px 17px;
+  }
 
-.card{
-padding:25px 17px;
-}
-
-.messageScroll{
-height:52vh;
-}
-
+  .messageScroll{
+    height:52vh;
+  }
 }
 
 </style>
 </head>
 
 <body>
-  <div class="floating f1">🤍</div>
+
+<div class="floating f1">🤍</div>
 <div class="floating f2">🙂‍↔️</div>
 <div class="floating f3">🫶🏻</div>
 <div class="floating f4">💓</div>
@@ -570,201 +523,181 @@ height:52vh;
 <div class="floating f9">🥰</div>
 <div class="floating f10">🤍</div>
 
-<audio
-id="backgroundMusic"
-preload="auto"
-playsinline
->
-<source
-src="https://res.cloudinary.com/s4rjpsff/video/upload/v1788244715/Haareya_Piano_Instrumental___Karaoke_With_Lyrics___Arijit_Singh___Notes___Hindi_Song_Keyboard_256k__1.mp3"
-type="audio/mpeg"
->
+<audio id="backgroundMusic" preload="auto" playsinline>
+  <source
+    src="https://res.cloudinary.com/s4rjpsff/video/upload/v1788244715/Haareya_Piano_Instrumental___Karaoke_With_Lyrics___Arijit_Singh___Notes___Hindi_Song_Keyboard_256k__1.mp3"
+    type="audio/mpeg">
 </audio>
+  <section id="welcomePage" class="page active">
 
+  <div class="card">
 
-<section id="welcomePage" class="page active">
+    <h1 class="welcomeTitle">
+      Welcome to my website page 🤍
+    </h1>
 
-<div class="card">
+    <div class="welcomeText">
+      Here is a small website created for you... 🥹
+    </div>
 
-<h1 class="welcomeTitle">
-Welcome to my website page 🤍
-</h1>
+    <button
+      id="openBubble"
+      class="openBubble"
+      onclick="openWebsite()">
+      Open 👐🏻
+    </button>
 
-<div class="welcomeText">
-Here is a small website created for you... 🥹
-</div>
-
-<button
-id="openBubble"
-class="openBubble"
-onclick="openWebsite()"
->
-Open 👐🏻
-</button>
-
-</div>
+  </div>
 
 </section>
 
 
 <section id="loginPage" class="page">
 
-<div class="card">
+  <div class="card">
 
-<h2 class="loginTitle">
-Hey Deepika 🤍
-</h2>
+    <h2 class="loginTitle">
+      Hey Deepika 🤍
+    </h2>
 
-<input
-id="passwordInput"
-class="input"
-type="password"
-placeholder="Enter Password 🔑"
-autocomplete="off"
->
+    <input
+      id="passwordInput"
+      class="input"
+      type="password"
+      placeholder="Enter Password 🔑"
+      autocomplete="off">
 
-<div class="hint">
-Hint: BFF 🤍
-</div>
+    <div class="hint">
+      Hint: BFF 🤍
+    </div>
 
-<button
-class="btn"
-onclick="checkPassword()"
->
-Enter 💗
-</button>
+    <button
+      class="btn"
+      onclick="checkPassword()">
+      Enter 💗
+    </button>
 
-<div
-id="loginError"
-class="loginError"
-></div>
+    <div id="loginError" class="loginError"></div>
 
-</div>
+  </div>
 
 </section>
 
 
 <section id="penguinPage" class="page">
 
-<div class="card">
+  <div class="card">
 
-<img
-class="penguinGif"
-src="https://res.cloudinary.com/s4rjpsff/image/upload/v1790096386/64185b4165d0b-funny-penguin-animated-gifs.gif"
-alt="Funny penguin"
->
+    <img
+      class="penguinGif"
+      src="https://res.cloudinary.com/s4rjpsff/image/upload/v1790096386/64185b4165d0b-funny-penguin-animated-gifs.gif"
+      alt="Funny penguin">
 
-<div class="penguinText">
-Hello Deepika! 🐧🤍
-</div>
+    <div class="penguinText">
+      Hello Deepika! 🐧🤍
+    </div>
 
-<button
-id="sayHelloButton"
-class="btn sayHello"
-onclick="speakHelloAndShowContinue()"
->
-🔊 Say Hello!
-</button>
+    <button
+      id="sayHelloButton"
+      class="btn"
+      onclick="speakHelloAndShowContinue()">
+      🔊 Say Hello!
+    </button>
 
-<br>
+    <br>
 
-<button
-id="penguinContinue"
-class="btn"
-onclick="goToSoundPage()"
->
-Continue 💗
-</button>
+    <button
+      id="penguinContinue"
+      class="btn"
+      onclick="goToSoundPage()">
+      Continue 💗
+    </button>
 
-</div>
+  </div>
 
 </section>
 
 
 <section id="soundPage" class="page">
 
-<div class="card">
+  <div class="card">
 
-<div class="soundIcon">
-🔊
-</div>
+    <div class="soundIcon">
+      🔊
+    </div>
 
-<h2 class="soundTitle">
-Please increase the sound a little 🔊
-</h2>
+    <h2 class="soundTitle">
+      Please increase the sound a little 🔊
+    </h2>
 
-<div class="soundText">
-Turn your volume up a little...
-</div>
+    <div class="soundText">
+      Turn your volume up a little...
+    </div>
 
-<div class="soundButtons">
+    <div class="soundButtons">
 
-<button
-class="btn"
-onclick="startBirthday()"
->
-Done 🤘🏻
-</button>
+      <button
+        class="btn"
+        onclick="startBirthday()">
+        Done 🤘🏻
+      </button>
 
-<button
-class="btn"
-onclick="startBirthday()"
->
-Okay 😊
-</button>
+      <button
+        class="btn"
+        onclick="startBirthday()">
+        Okay 😊
+      </button>
 
-</div>
+    </div>
 
-</div>
+  </div>
+
+</section>
+  
+  <section id="birthdayPage" class="page">
+
+  <div class="card">
+
+    <img
+      class="birthdayGif"
+      src="https://res.cloudinary.com/s4rjpsff/image/upload/v1789746473/happy-dance-birthday.gif"
+      alt="Happy Birthday">
+
+    <h1 class="birthdayTitle">
+      Happy Birthday Deepika 🥹🤍
+    </h1>
+
+    <div class="birthdaySub">
+      Wishing you a very Happy Birthday 💛
+      <br>
+      This little surprise is just for you 🤍
+    </div>
+
+    <button
+      class="btn"
+      onclick="openMessagePage()">
+      Continue 💌
+    </button>
+
+  </div>
 
 </section>
 
 
-<section id="birthdayPage" class="page">
-
-<div class="card">
-
-<img
-class="birthdayGif"
-src="https://res.cloudinary.com/s4rjpsff/image/upload/v1789746473/happy-dance-birthday.gif"
-alt="Happy Birthday"
->
-
-<h1 class="birthdayTitle">
-Happy Birthday Deepika 🥹🤍
-</h1>
-
-<div class="birthdaySub">
-Wishing you a very Happy Birthday 💛
-<br>
-This little surprise is just for you 🤍
-</div>
-
-<button
-class="btn"
-onclick="openMessagePage()"
->
-Continue 💌
-</button>
-
-</div>
-
-</section>
 <section id="messagePage" class="page">
 
-<div class="card messageCard">
+  <div class="card messageCard">
 
-<h2>
-Hey best friend... 🤍
-</h2>
+    <h2>
+      Hey best friend... 🤍
+    </h2>
 
-<div
-id="messageScroll"
-class="messageScroll"
-onscroll="checkMessageScroll()"
->
+    <div
+      id="messageScroll"
+      class="messageScroll"
+      onscroll="checkMessageScroll()">
 
-<div class="message">
+      <div class="message">
 
 Wishing you many many happy returns of the day 🤍🐷
 
@@ -792,34 +725,31 @@ Enjoy your most delicious life.
 
 Grow a lot in life. 🥰🎂
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-<div
-id="scrollHint"
-class="scrollHint"
-onclick="scrollHintError()"
->
-Scroll down 👇🏻
-</div>
+    <div
+      id="scrollHint"
+      class="scrollHint"
+      onclick="scrollHintError()">
+      Scroll down 👇🏻
+    </div>
 
-<div
-id="scrollError"
-class="scrollError"
->
-Abee dheere dheere niche scroll kar... msg ko 😭😂
-</div>
+    <div
+      id="scrollError"
+      class="scrollError">
+      Abee dheere dheere niche scroll kar... msg ko 😭😂
+    </div>
 
-<button
-id="continueMessage"
-class="btn"
-onclick="continueAfterMessage()"
->
-Continue 💌
-</button>
+    <button
+      id="continueMessage"
+      class="btn"
+      onclick="continueAfterMessage()">
+      Continue 💌
+    </button>
 
-</div>
+  </div>
 
 </section>
 
@@ -828,779 +758,603 @@ Continue 💌
 
 <div id="surpriseNotification">
 
-<div class="notificationEmoji">
-🥹🤍
-</div>
+  <div class="notificationEmoji">
+    🥹🤍
+  </div>
 
-<div class="notificationTitle">
-Wait...
-</div>
+  <div class="notificationTitle">
+    Wait...
+  </div>
 
-<div class="notificationText">
-One last little surprise is waiting for you...
-</div>
-
-</div>
-
-
-<section id="videoPage" class="page">
-
-<div class="card videoCard">
-
-<h2 class="videoTitle">
-A small vdo for u
-</h2>
-
-<video
-id="birthdayVideo"
-playsinline
-preload="auto"
-controls
-controlsList="nodownload"
->
-
-<source
-src="https://res.cloudinary.com/s4rjpsff/video/upload/v1790493846/InShot_20260901_181719307.mp4"
-type="video/mp4"
->
-
-</video>
+  <div class="notificationText">
+    One last little surprise is waiting for you...
+  </div>
 
 </div>
+  <section id="videoPage" class="page">
+
+  <div class="card videoCard">
+
+    <h2 class="videoTitle">
+      A small vdo for u
+    </h2>
+
+    <video
+      id="birthdayVideo"
+      playsinline
+      preload="auto"
+      controls
+      controlsList="nodownload">
+
+      <source
+        src="https://res.cloudinary.com/s4rjpsff/video/upload/v1790493846/InShot_20260901_181719307.mp4"
+        type="video/mp4">
+
+    </video>
+
+  </div>
 
 </section>
 
 
 <section id="finalPage" class="page">
 
-<div class="card">
+  <div class="card">
 
-<h1 class="finalTitle">
-Bye Deepika 🥹💗
-</h1>
+    <h1 class="finalTitle">
+      Bye Deepika 🥹💗
+    </h1>
 
-<div class="finalText">
+    <div class="finalText">
 
-Once again, wishing you a very Happy Birthday Deepika 🎂🤍✨
+      Once again, wishing you a very Happy Birthday Deepika 🎂🤍✨
 
-<br><br>
+      <br><br>
 
-Always keep smiling and always stay happy. 🫶🏻
+      Always keep smiling and always stay happy. 🫶🏻
 
-</div>
+    </div>
 
-<div class="lastPrayer">
+    <div class="lastPrayer">
 
-I will pray to God that we will always be good friends...🥰🤍
+      I will pray to God that we will always be good friends...🥰🤍
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
 
 <script>
-  function showPage(pageId){
 
-const pages=document.querySelectorAll(".page");
+const music =
+  document.getElementById("backgroundMusic");
 
-pages.forEach(function(page){
-page.classList.remove("active");
-});
+const video =
+  document.getElementById("birthdayVideo");
 
-const target=document.getElementById(pageId);
 
-if(target){
+function showPage(pageId){
 
-target.classList.add("active");
+  document
+    .querySelectorAll(".page")
+    .forEach(function(page){
 
-window.scrollTo(0,0);
+      page.classList.remove("active");
+
+    });
+
+  const page =
+    document.getElementById(pageId);
+
+  if(page){
+
+    page.classList.add("active");
+
+    window.scrollTo(0,0);
+
+  }
 
 }
-
-}
-
-
-const music=document.getElementById("backgroundMusic");
-
-const video=document.getElementById("birthdayVideo");
 
 
 function bubblePopSound(){
 
-try{
+  try{
 
-const AudioContext=
-window.AudioContext ||
-window.webkitAudioContext;
+    const AudioContext =
+      window.AudioContext ||
+      window.webkitAudioContext;
 
-const ctx=new AudioContext();
+    const ctx =
+      new AudioContext();
 
-const now=ctx.currentTime;
+    const now =
+      ctx.currentTime;
 
-const master=ctx.createGain();
+    const master =
+      ctx.createGain();
 
-master.gain.setValueAtTime(1.4,now);
+    master.gain.setValueAtTime(
+      1.4,
+      now
+    );
 
-master.gain.exponentialRampToValueAtTime(
-0.0001,
-now+0.55
-);
+    master.gain.exponentialRampToValueAtTime(
+      0.0001,
+      now + 0.55
+    );
 
-master.connect(ctx.destination);
+    master.connect(ctx.destination);
 
+    const pop =
+      ctx.createOscillator();
 
-/* FIRST POP */
+    const popGain =
+      ctx.createGain();
 
-const pop=ctx.createOscillator();
+    pop.type = "sine";
 
-const popGain=ctx.createGain();
+    pop.frequency.setValueAtTime(
+      500,
+      now
+    );
 
-pop.type="sine";
+    pop.frequency.exponentialRampToValueAtTime(
+      55,
+      now + 0.32
+    );
 
-pop.frequency.setValueAtTime(
-500,
-now
-);
+    popGain.gain.setValueAtTime(
+      0.0001,
+      now
+    );
 
-pop.frequency.exponentialRampToValueAtTime(
-55,
-now+0.32
-);
+    popGain.gain.exponentialRampToValueAtTime(
+      1,
+      now + 0.015
+    );
 
-popGain.gain.setValueAtTime(
-0.0001,
-now
-);
+    popGain.gain.exponentialRampToValueAtTime(
+      0.0001,
+      now + 0.35
+    );
 
-popGain.gain.exponentialRampToValueAtTime(
-1.0,
-now+0.015
-);
+    pop.connect(popGain);
+    popGain.connect(master);
 
-popGain.gain.exponentialRampToValueAtTime(
-0.0001,
-now+0.35
-);
+    pop.start(now);
+    pop.stop(now + 0.36);
+        const crack =
+      ctx.createOscillator();
 
-pop.connect(popGain);
+    const crackGain =
+      ctx.createGain();
 
-popGain.connect(master);
+    crack.type = "triangle";
 
-pop.start(now);
+    crack.frequency.setValueAtTime(
+      1250,
+      now
+    );
 
-pop.stop(now+0.36);
+    crack.frequency.exponentialRampToValueAtTime(
+      180,
+      now + 0.18
+    );
 
+    crackGain.gain.setValueAtTime(
+      0.0001,
+      now
+    );
 
-/* CRACK */
+    crackGain.gain.exponentialRampToValueAtTime(
+      0.75,
+      now + 0.008
+    );
 
-const crack=ctx.createOscillator();
+    crackGain.gain.exponentialRampToValueAtTime(
+      0.0001,
+      now + 0.2
+    );
 
-const crackGain=ctx.createGain();
+    crack.connect(crackGain);
+    crackGain.connect(master);
 
-crack.type="triangle";
+    crack.start(now);
+    crack.stop(now + 0.21);
 
-crack.frequency.setValueAtTime(
-1250,
-now
-);
+  }catch(error){
 
-crack.frequency.exponentialRampToValueAtTime(
-180,
-now+0.18
-);
+    console.log(
+      "Bubble sound unavailable:",
+      error
+    );
 
-crackGain.gain.setValueAtTime(
-0.0001,
-now
-);
-
-crackGain.gain.exponentialRampToValueAtTime(
-0.75,
-now+0.008
-);
-
-crackGain.gain.exponentialRampToValueAtTime(
-0.0001,
-now+0.2
-);
-
-crack.connect(crackGain);
-
-crackGain.connect(master);
-
-crack.start(now);
-
-crack.stop(now+0.21);
-
-
-/* SECOND POP */
-
-const pop2=ctx.createOscillator();
-
-const pop2Gain=ctx.createGain();
-
-pop2.type="sine";
-
-pop2.frequency.setValueAtTime(
-700,
-now+0.06
-);
-
-pop2.frequency.exponentialRampToValueAtTime(
-80,
-now+0.30
-);
-
-pop2Gain.gain.setValueAtTime(
-0.0001,
-now
-);
-
-pop2Gain.gain.exponentialRampToValueAtTime(
-0.65,
-now+0.07
-);
-
-pop2Gain.gain.exponentialRampToValueAtTime(
-0.0001,
-now+0.35
-);
-
-pop2.connect(pop2Gain);
-
-pop2Gain.connect(master);
-
-pop2.start(now+0.05);
-
-pop2.stop(now+0.36);
-
-
-/* ECHO */
-
-const echo=ctx.createOscillator();
-
-const echoGain=ctx.createGain();
-
-echo.type="sine";
-
-echo.frequency.setValueAtTime(
-300,
-now+0.16
-);
-
-echo.frequency.exponentialRampToValueAtTime(
-70,
-now+0.5
-);
-
-echoGain.gain.setValueAtTime(
-0.0001,
-now
-);
-
-echoGain.gain.exponentialRampToValueAtTime(
-0.35,
-now+0.18
-);
-
-echoGain.gain.exponentialRampToValueAtTime(
-0.0001,
-now+0.55
-);
-
-echo.connect(echoGain);
-
-echoGain.connect(master);
-
-echo.start(now+0.15);
-
-echo.stop(now+0.56);
-
-}
-
-catch(error){
-
-console.log(
-"Bubble sound unavailable:",
-error
-);
-
-}
+  }
 
 }
 
 
 function openWebsite(){
 
-const bubble=
-document.getElementById("openBubble");
+  const bubble =
+    document.getElementById("openBubble");
 
-if(
-bubble.classList.contains("burst")
-){
+  if(
+    bubble.classList.contains("burst")
+  ){
+    return;
+  }
 
-return;
+  bubblePopSound();
 
-}
+  bubble.classList.add("burst");
 
-bubblePopSound();
+  setTimeout(function(){
 
-bubble.classList.add("burst");
+    showPage("loginPage");
 
-setTimeout(function(){
+    bubble.classList.remove("burst");
 
-showPage("loginPage");
-
-bubble.classList.remove("burst");
-
-},650);
+  },650);
 
 }
 
 
 function checkPassword(){
 
-const input=
-document.getElementById("passwordInput");
+  const input =
+    document.getElementById("passwordInput");
 
-const error=
-document.getElementById("loginError");
+  const error =
+    document.getElementById("loginError");
 
-if(input.value==="BFF"){
+  if(input.value === "BFF"){
 
-error.textContent="";
+    error.textContent = "";
 
-showPage("penguinPage");
+    showPage("penguinPage");
 
-input.value="";
+    input.value = "";
 
-}
+  }else{
 
-else{
+    error.textContent =
+      "Wrong password 🥺 Try again.";
 
-error.textContent=
-"Wrong password 🥺 Try again.";
+    input.focus();
 
-input.focus();
-
-}
-
-}
-  document
-.getElementById("passwordInput")
-.addEventListener(
-"keydown",
-function(event){
-
-if(event.key==="Enter"){
-
-checkPassword();
+  }
 
 }
 
-}
-);
+
+document
+  .getElementById("passwordInput")
+  .addEventListener(
+    "keydown",
+    function(event){
+
+      if(event.key === "Enter"){
+
+        checkPassword();
+
+      }
+
+    }
+  );
 
 
 function speakHelloAndShowContinue(){
 
-const continueButton=
-document.getElementById("penguinContinue");
+  const button =
+    document.getElementById(
+      "penguinContinue"
+    );
 
-continueButton.classList.remove("show");
+  button.classList.remove("show");
 
-if(!("speechSynthesis" in window)){
+  if(
+    !("speechSynthesis" in window)
+  ){
 
-continueButton.classList.add("show");
+    button.classList.add("show");
 
-return;
+    return;
 
-}
+  }
 
-speechSynthesis.cancel();
+  speechSynthesis.cancel();
 
-speechSynthesis.resume();
+  const voice =
+    new SpeechSynthesisUtterance(
+      "Hello Deepika!"
+    );
 
-const voice=
-new SpeechSynthesisUtterance(
-"Hello Deepika!"
-);
+  voice.lang = "en-US";
+  voice.rate = .78;
+  voice.pitch = 1.05;
+  voice.volume = 1;
 
-voice.lang="en-US";
+  speechSynthesis.speak(voice);
 
-voice.rate=.78;
+  setTimeout(function(){
 
-voice.pitch=1.05;
+    button.classList.add("show");
 
-voice.volume=1.0;
-
-const voices=
-speechSynthesis.getVoices();
-
-const englishVoice=
-voices.find(
-function(v){
-
-return v.lang &&
-v.lang.toLowerCase().startsWith("en");
-
-}
-);
-
-if(englishVoice){
-
-voice.voice=englishVoice;
-
-}
-
-speechSynthesis.speak(voice);
-
-voice.onstart=function(){
-
-setTimeout(
-function(){
-
-continueButton.classList.add("show");
-
-},
-400
-);
-
-};
-
-setTimeout(
-function(){
-
-continueButton.classList.add("show");
-
-},
-1500
-);
+  },1500);
 
 }
 
 
 function goToSoundPage(){
 
-showPage("soundPage");
+  showPage("soundPage");
 
 }
 
 
 function startBirthday(){
 
-music.volume=1.0;
+  music.volume = 1;
 
-music.currentTime=0;
+  music.currentTime = 0;
 
-const promise=music.play();
+  const promise =
+    music.play();
 
-if(promise!==undefined){
+  if(promise){
 
-promise.catch(
-function(error){
+    promise.catch(function(error){
 
-console.log(
-"Haareya play error:",
-error
-);
+      console.log(
+        "Music play error:",
+        error
+      );
 
-}
-);
+    });
 
-}
+  }
 
-showPage("birthdayPage");
+  showPage("birthdayPage");
 
 }
 
 
 function openMessagePage(){
 
-showPage("messagePage");
+  showPage("messagePage");
 
-const button=
-document.getElementById(
-"continueMessage"
-);
+  const button =
+    document.getElementById(
+      "continueMessage"
+    );
 
-const hint=
-document.getElementById(
-"scrollHint"
-);
+  const hint =
+    document.getElementById(
+      "scrollHint"
+    );
 
-const error=
-document.getElementById(
-"scrollError"
-);
+  const error =
+    document.getElementById(
+      "scrollError"
+    );
 
-const box=
-document.getElementById(
-"messageScroll"
-);
+  const box =
+    document.getElementById(
+      "messageScroll"
+    );
 
-button.classList.remove("show");
+  button.classList.remove("show");
 
-button.style.display="none";
+  button.style.display = "none";
 
-hint.style.display="inline-block";
+  hint.style.display = "inline-block";
 
-error.classList.remove("show");
+  error.classList.remove("show");
 
-box.scrollTop=0;
+  box.scrollTop = 0;
 
 }
 
 
 function checkMessageScroll(){
 
-const box=
-document.getElementById(
-"messageScroll"
-);
+  const box =
+    document.getElementById(
+      "messageScroll"
+    );
 
-const button=
-document.getElementById(
-"continueMessage"
-);
+  const button =
+    document.getElementById(
+      "continueMessage"
+    );
 
-const hint=
-document.getElementById(
-"scrollHint"
-);
+  const hint =
+    document.getElementById(
+      "scrollHint"
+    );
 
-const error=
-document.getElementById(
-"scrollError"
-);
+  const current =
+    box.scrollTop;
 
-const currentScroll=
-box.scrollTop;
+  const max =
+    box.scrollHeight -
+    box.clientHeight;
 
-const maxScroll=
-box.scrollHeight-box.clientHeight;
+  if(
+    current > 10 &&
+    current >= max - 10
+  ){
 
-const userHasScrolled=
-currentScroll>10;
+    hint.style.display = "none";
 
-const reachedBottom=
-currentScroll>=maxScroll-10;
+    button.style.display = "inline-block";
 
-if(
-userHasScrolled &&
-reachedBottom
-){
+    button.classList.add("show");
 
-hint.style.display="none";
-
-error.classList.remove("show");
-
-button.style.display="inline-block";
-
-button.classList.add("show");
-
-}
-
-else{
-
-hint.style.display="inline-block";
-
-button.classList.remove("show");
-
-button.style.display="none";
-
-}
+  }
 
 }
 
 
 function scrollHintError(){
 
-const error=
-document.getElementById(
-"scrollError"
-);
+  const error =
+    document.getElementById(
+      "scrollError"
+    );
 
-error.classList.remove("show");
+  error.classList.remove("show");
 
-void error.offsetWidth;
+  void error.offsetWidth;
 
-error.classList.add("show");
+  error.classList.add("show");
 
 }
-  function showSurpriseNotification(){
 
-const backdrop=
-document.getElementById(
-"notificationBackdrop"
-);
 
-const notification=
-document.getElementById(
-"surpriseNotification"
-);
+function showSurpriseNotification(){
 
-backdrop.classList.add("show");
+  document
+    .getElementById("notificationBackdrop")
+    .classList.add("show");
 
-notification.classList.add("show");
-
-notification.classList.add("notificationPop");
+  document
+    .getElementById("surpriseNotification")
+    .classList.add("show");
 
 }
 
 
 function hideSurpriseNotification(){
 
-const backdrop=
-document.getElementById(
-"notificationBackdrop"
-);
+  document
+    .getElementById("notificationBackdrop")
+    .classList.remove("show");
 
-const notification=
-document.getElementById(
-"surpriseNotification"
-);
-
-notification.classList.remove("show");
-
-notification.classList.remove("notificationPop");
-
-backdrop.classList.remove("show");
+  document
+    .getElementById("surpriseNotification")
+    .classList.remove("show");
 
 }
+  function continueAfterMessage(){
 
+  const button =
+    document.getElementById(
+      "continueMessage"
+    );
 
-function continueAfterMessage(){
+  if(
+    !button.classList.contains("show")
+  ){
+    return;
+  }
 
-const button=
-document.getElementById(
-"continueMessage"
-);
+  showSurpriseNotification();
 
-if(
-!button.classList.contains("show")
-){
+  setTimeout(function(){
 
-return;
+    hideSurpriseNotification();
 
-}
+    openVideoPage();
 
-showSurpriseNotification();
-
-setTimeout(
-function(){
-
-hideSurpriseNotification();
-
-openVideoPage();
-
-},
-1400
-);
+  },1400);
 
 }
 
 
 function openVideoPage(){
 
-music.pause();
+  music.pause();
 
-showPage("videoPage");
+  showPage("videoPage");
 
-video.currentTime=0;
+  video.currentTime = 0;
 
-setTimeout(
-function(){
+  setTimeout(function(){
 
-const promise=video.play();
+    const promise =
+      video.play();
 
-if(promise!==undefined){
+    if(promise){
 
-promise.catch(
-function(error){
+      promise.catch(function(error){
 
-console.log(
-"Video autoplay blocked:",
-error
-);
+        console.log(
+          "Video autoplay blocked:",
+          error
+        );
 
-}
-);
+      });
 
-}
+    }
 
-},
-250
-);
+  },250);
 
 }
 
 
 video.addEventListener(
-"play",
-function(){
+  "play",
+  function(){
 
-music.pause();
+    music.pause();
 
-}
+  }
 );
 
 
 video.addEventListener(
-"ended",
-function(){
+  "ended",
+  function(){
 
-music.volume=1.0;
+    music.volume = 1;
 
-const promise=music.play();
+    const promise =
+      music.play();
 
-if(promise!==undefined){
+    if(promise){
 
-promise.catch(
-function(error){
+      promise.catch(function(error){
 
-console.log(
-"Haareya resume error:",
-error
-);
+        console.log(
+          "Music resume error:",
+          error
+        );
 
-}
-);
+      });
 
-}
+    }
 
-setTimeout(
-function(){
+    setTimeout(function(){
 
-showPage("finalPage");
+      showPage("finalPage");
 
-},
-350
-);
+    },350);
 
-}
+  }
 );
 
 
 video.addEventListener(
-"pause",
-function(){
+  "pause",
+  function(){
 
-if(!video.ended){
+    if(!video.ended){
 
-music.pause();
+      music.pause();
 
-}
+    }
 
-}
+  }
 );
-  </script>
+
+</script>
 
 </body>
-
 </html>
-  
   
   
