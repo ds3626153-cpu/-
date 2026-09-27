@@ -1918,7 +1918,7 @@ function speakHelloAndShowContinue(){
 
 /* SOUND PAGE */
 
-  function goToSoundPage(){
+function goToSoundPage(){
 
   showPage(
     "soundPage"
@@ -1941,14 +1941,17 @@ function startBirthday(){
     "birthdayPage"
   );
 
+
   music.volume =
     1.0;
 
   music.currentTime =
     0;
 
+
   const promise =
     music.play();
+
 
   if(
     promise !== undefined
@@ -1978,6 +1981,7 @@ function openMessagePage(){
     "messagePage"
   );
 
+
   const button =
     document.getElementById(
       "continueMessage"
@@ -1993,29 +1997,36 @@ function openMessagePage(){
       "scrollError"
     );
 
+
   button.classList.remove(
     "show"
   );
 
   button.style.display =
-  "none";
+    "none";
 
-hint.style.display =
-  "inline-flex";
 
-error.classList.remove(
-  "show"
-);
+  hint.style.display =
+    "inline-flex";
 
-window.scrollTo(
-  0,
-  0
-);
 
-setTimeout(
-  checkMessageScroll,
-  100
-);
+  error.classList.remove(
+    "show"
+  );
+
+
+  window.scrollTo(
+    0,
+    0
+  );
+
+
+  setTimeout(
+    checkMessageScroll,
+    100
+  );
+
+}
 
 
 /* MESSAGE SCROLL CHECK */
@@ -2027,6 +2038,7 @@ function checkMessageScroll(){
       "messagePage"
     );
 
+
   if(
     !messagePage.classList.contains(
       "active"
@@ -2036,6 +2048,7 @@ function checkMessageScroll(){
     return;
 
   }
+
 
   const button =
     document.getElementById(
@@ -2057,6 +2070,7 @@ function checkMessageScroll(){
       "continueTrigger"
     );
 
+
   if(!trigger){
 
     return;
@@ -2066,12 +2080,13 @@ function checkMessageScroll(){
 
   /*
     "Grow a lot in life..."
-    screen-e visible holei
+    text screen-e visible holei
     Continue button show hobe.
   */
 
   const triggerRect =
     trigger.getBoundingClientRect();
+
 
   const triggerVisible =
     triggerRect.top <
@@ -2127,15 +2142,19 @@ function scrollHintError(){
       "scrollError"
     );
 
+
   error.classList.remove(
     "show"
   );
 
+
   void error.offsetWidth;
+
 
   error.classList.add(
     "show"
   );
+
 
   setTimeout(
     function(){
@@ -2165,6 +2184,7 @@ function continueAfterMessage(){
       "surpriseNotification"
     );
 
+
   backdrop.classList.add(
     "show"
   );
@@ -2190,6 +2210,7 @@ function closeNotificationAndOpenChocolate(){
       "surpriseNotification"
     );
 
+
   notification.classList.remove(
     "show"
   );
@@ -2197,6 +2218,7 @@ function closeNotificationAndOpenChocolate(){
   backdrop.classList.remove(
     "show"
   );
+
 
   setTimeout(
     function(){
@@ -2239,12 +2261,15 @@ function chooseSomethingElse(){
       "chocolateInput"
     );
 
+
   input.value =
     "";
+
 
   showPage(
     "chocolateInputPage"
   );
+
 
   setTimeout(
     function(){
@@ -2267,8 +2292,10 @@ function submitChocolate(){
       "chocolateInput"
     );
 
+
   const chocolate =
     input.value.trim();
+
 
   if(
     chocolate === ""
@@ -2280,16 +2307,19 @@ function submitChocolate(){
 
   }
 
+
   const response =
     document.getElementById(
       "chocolateResponseText"
     );
+
 
   response.innerHTML =
     "Okhyy🫠noteddd,,,<br>" +
     "jis din meet hogaa ,,yea " +
     chocolate +
     " khilaungi main 🍫👐🏻";
+
 
   showPage(
     "chocolateResponsePage"
@@ -2322,20 +2352,29 @@ document
 
 function openVideoPage(){
 
+  /*
+    Video page open korar age
+    music pause hobe.
+  */
+
   music.pause();
+
 
   showPage(
     "videoPage"
   );
 
+
   video.currentTime =
     0;
+
 
   setTimeout(
     function(){
 
       const promise =
         video.play();
+
 
       if(
         promise !== undefined
@@ -2379,11 +2418,18 @@ video.addEventListener(
   "ended",
   function(){
 
+    /*
+      Video ses hole Haareya
+      abar resume hobe.
+    */
+
     music.volume =
       1;
 
+
     const promise =
       music.play();
+
 
     if(
       promise !== undefined
@@ -2401,6 +2447,7 @@ video.addEventListener(
       );
 
     }
+
 
     setTimeout(
       function(){
@@ -2449,5 +2496,3 @@ if(
     };
 
 }
-
- 
