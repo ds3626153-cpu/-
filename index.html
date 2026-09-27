@@ -1,834 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Deepika 💗</title>
 
 <style>
 
 *{
-  box-sizing:border-box;
+box-sizing:border-box;
 }
 
-html,
+html,body{
+margin:0;
+padding:0;
+min-height:100%;
+}
+
 body{
-  margin:0;
-  padding:0;
-  min-height:100%;
+min-height:100vh;
+font-family:Arial,sans-serif;
+color:white;
+overflow-x:hidden;
+background:
+radial-gradient(
+circle at 15% 0%,
+#9b45c6 0%,
+#681d88 25%,
+#35004f 52%,
+#22002f 68%,
+#c52f83 100%
+);
+background-attachment:fixed;
 }
-
-body{
-
-  min-height:100vh;
-
-  font-family:
-    Arial,
-    sans-serif;
-
-  color:white;
-
-  overflow-x:hidden;
-
-  background:
-
-    radial-gradient(
-      circle at 15% 0%,
-      #9b45c6 0%,
-      #681d88 25%,
-      #35004f 52%,
-      #22002f 68%,
-      #c52f83 100%
-    );
-
-  background-attachment:fixed;
-
-}
-
-
-/* =========================
-   FLOATING EMOJIS
-========================= */
 
 .floating{
-
-  position:fixed;
-
-  z-index:2;
-
-  pointer-events:none;
-
-  opacity:.28;
-
-  font-size:25px;
-
-  animation:
-    floatEmoji 8s linear infinite;
-
+position:fixed;
+z-index:2;
+pointer-events:none;
+opacity:.28;
+font-size:25px;
+animation:floatEmoji 8s linear infinite;
 }
 
-.f1{
-  left:8%;
-  bottom:-40px;
-  animation-delay:0s;
-}
-
-.f2{
-  left:22%;
-  bottom:-70px;
-  animation-delay:1.5s;
-}
-
-.f3{
-  left:40%;
-  bottom:-50px;
-  animation-delay:3s;
-}
-
-.f4{
-  left:58%;
-  bottom:-80px;
-  animation-delay:2s;
-}
-
-.f5{
-  left:75%;
-  bottom:-40px;
-  animation-delay:4s;
-}
-
-.f6{
-  left:90%;
-  bottom:-60px;
-  animation-delay:1s;
-}
-
-.f7{
-  left:15%;
-  bottom:-100px;
-  animation-delay:5s;
-}
-
-.f8{
-  left:50%;
-  bottom:-100px;
-  animation-delay:6s;
-}
-
-.f9{
-  left:68%;
-  bottom:-100px;
-  animation-delay:3.5s;
-}
-
-.f10{
-  left:83%;
-  bottom:-100px;
-  animation-delay:7s;
-}
+.f1{left:8%;bottom:-40px;animation-delay:0s}
+.f2{left:22%;bottom:-70px;animation-delay:1.5s}
+.f3{left:40%;bottom:-50px;animation-delay:3s}
+.f4{left:58%;bottom:-80px;animation-delay:2s}
+.f5{left:75%;bottom:-40px;animation-delay:4s}
+.f6{left:90%;bottom:-60px;animation-delay:1s}
+.f7{left:15%;bottom:-100px;animation-delay:5s}
+.f8{left:50%;bottom:-100px;animation-delay:6s}
+.f9{left:68%;bottom:-100px;animation-delay:3.5s}
+.f10{left:83%;bottom:-100px;animation-delay:7s}
 
 @keyframes floatEmoji{
-
-  0%{
-    transform:
-      translateY(0)
-      rotate(0deg);
-    opacity:0;
-  }
-
-  10%{
-    opacity:.28;
-  }
-
-  50%{
-    transform:
-      translateY(-50vh)
-      rotate(15deg);
-    opacity:.32;
-  }
-
-  100%{
-    transform:
-      translateY(-115vh)
-      rotate(-15deg);
-    opacity:0;
-  }
-
+0%{transform:translateY(0) rotate(0);opacity:0}
+10%{opacity:.28}
+50%{transform:translateY(-50vh) rotate(15deg);opacity:.32}
+100%{transform:translateY(-115vh) rotate(-15deg);opacity:0}
 }
 
-
-/* =========================
-   PAGE SYSTEM
-========================= */
-
 .page{
-
-  display:none;
-
-  min-height:100vh;
-
-  width:100%;
-
-  padding:
-    35px
-    18px;
-
-  align-items:center;
-
-  justify-content:center;
-
-  position:relative;
-
-  z-index:5;
-
+display:none;
+min-height:100vh;
+width:100%;
+padding:35px 18px;
+align-items:center;
+justify-content:center;
+position:relative;
+z-index:5;
 }
 
 .page.active{
-
-  display:flex;
-
+display:flex;
 }
-
-
-/* =========================
-   GLASS CARD
-========================= */
 
 .card{
-
-  width:min(
-    92%,
-    520px
-  );
-
-  padding:30px 22px;
-
-  border-radius:30px;
-
-  text-align:center;
-
-  background:
-
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.16),
-      rgba(255,100,210,.10),
-      rgba(150,70,220,.12)
-    );
-
-  border:
-    1px solid
-    rgba(255,255,255,.30);
-
-  backdrop-filter:
-    blur(22px);
-
-  -webkit-backdrop-filter:
-    blur(22px);
-
-  box-shadow:
-
-    0 25px 80px
-    rgba(0,0,0,.38),
-
-    inset 0 1px 1px
-    rgba(255,255,255,.20);
-
+width:min(92%,520px);
+padding:30px 22px;
+border-radius:30px;
+text-align:center;
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.16),
+rgba(255,100,210,.10),
+rgba(150,70,220,.12)
+);
+border:1px solid rgba(255,255,255,.30);
+backdrop-filter:blur(22px);
+-webkit-backdrop-filter:blur(22px);
+box-shadow:
+0 25px 80px rgba(0,0,0,.38),
+inset 0 1px 1px rgba(255,255,255,.20);
 }
 
-
-/* =========================
-   HEADINGS
-========================= */
-
-h1,
-h2,
-h3{
-  margin-top:0;
+h1,h2,h3{
+margin-top:0;
 }
 
 h1{
-
-  font-size:
-    clamp(
-      27px,
-      7vw,
-      42px
-    );
-
+font-size:clamp(27px,7vw,42px);
 }
 
 h2{
-
-  font-size:
-    clamp(
-      24px,
-      6vw,
-      34px
-    );
-
+font-size:clamp(24px,6vw,34px);
 }
 
 p{
-
-  line-height:1.7;
-
+line-height:1.7;
 }
 
-
-/* =========================
-   BUTTON
-========================= */
-
 .btn{
-
-  border:none;
-
-  outline:none;
-
-  cursor:pointer;
-
-  color:white;
-
-  font-size:16px;
-
-  font-weight:bold;
-
-  padding:
-    13px
-    24px;
-
-  border-radius:30px;
-
-  background:
-
-    linear-gradient(
-      135deg,
-      #ff4fb3,
-      #9b45d4
-    );
-
-  box-shadow:
-
-    0 10px 25px
-    rgba(194,60,190,.35),
-
-    inset 0 1px 1px
-    rgba(255,255,255,.30);
-
-  transition:
-    .25s ease;
-
+border:none;
+outline:none;
+cursor:pointer;
+color:white;
+font-size:16px;
+font-weight:bold;
+padding:13px 24px;
+border-radius:30px;
+background:
+linear-gradient(
+135deg,
+#ff4fb3,
+#9b45d4
+);
+box-shadow:
+0 10px 25px rgba(194,60,190,.35),
+inset 0 1px 1px rgba(255,255,255,.30);
+transition:.25s ease;
 }
 
 .btn:hover{
-
-  transform:
-    translateY(-2px)
-    scale(1.02);
-
+transform:translateY(-2px) scale(1.02);
 }
 
 .btn:active{
-
-  transform:
-    scale(.96);
-
+transform:scale(.96);
 }
 
-
-/* =========================
-   WELCOME PAGE
-========================= */
-
 .welcomeTitle{
-
-  font-size:
-    clamp(
-      27px,
-      7vw,
-      38px
-    );
-
-  margin-bottom:12px;
-
+font-size:clamp(27px,7vw,38px);
+margin-bottom:12px;
 }
 
 .welcomeText{
-
-  font-size:15px;
-
-  line-height:1.7;
-
-  opacity:.92;
-
-  margin-bottom:25px;
-
+font-size:15px;
+line-height:1.7;
+opacity:.92;
+margin-bottom:25px;
 }
 
-
-/* =========================
-   BUBBLE BUTTON
-========================= */
-
 .openBubble{
-
-  width:125px;
-
-  height:125px;
-
-  border-radius:50%;
-
-  border:
-    1px solid
-    rgba(255,255,255,.55);
-
-  color:white;
-
-  font-size:17px;
-
-  font-weight:bold;
-
-  cursor:pointer;
-
-  background:
-
-    radial-gradient(
-      circle at 30% 25%,
-      rgba(255,255,255,.48),
-      rgba(255,120,220,.24),
-      rgba(145,60,220,.25)
-    );
-
-  backdrop-filter:blur(12px);
-
-  -webkit-backdrop-filter:blur(12px);
-
-  box-shadow:
-
-    0 0 30px
-    rgba(255,100,220,.35),
-
-    inset 0 2px 5px
-    rgba(255,255,255,.30);
-
-  transition:
-    .3s ease;
-
-  animation:
-    bubbleFloat 2.5s ease-in-out infinite;
-
+width:125px;
+height:125px;
+border-radius:50%;
+border:1px solid rgba(255,255,255,.55);
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+background:
+radial-gradient(
+circle at 30% 25%,
+rgba(255,255,255,.48),
+rgba(255,120,220,.24),
+rgba(145,60,220,.25)
+);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+box-shadow:
+0 0 30px rgba(255,100,220,.35),
+inset 0 2px 5px rgba(255,255,255,.30);
+transition:.3s ease;
+animation:bubbleFloat 2.5s ease-in-out infinite;
 }
 
 .openBubble:hover{
-
-  transform:
-    scale(1.05);
-
+transform:scale(1.05);
 }
 
 @keyframes bubbleFloat{
-
-  0%,100%{
-    transform:translateY(0);
-  }
-
-  50%{
-    transform:translateY(-8px);
-  }
-
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-8px)}
 }
 
 .openBubble.burst{
-
-  animation:
-    bubbleBurst .65s ease forwards;
-
+animation:bubbleBurst .65s ease forwards;
 }
 
 @keyframes bubbleBurst{
-
-  0%{
-
-    transform:
-      scale(1);
-
-    opacity:1;
-
-  }
-
-  35%{
-
-    transform:
-      scale(1.12);
-
-    opacity:1;
-
-  }
-
-  100%{
-
-    transform:
-      scale(12);
-
-    opacity:0;
-
-  }
-
+0%{transform:scale(1);opacity:1}
+35%{transform:scale(1.12);opacity:1}
+100%{transform:scale(12);opacity:0}
 }
-
-
-/* =========================
-   LOGIN
-========================= */
 
 .loginTitle{
-
-  margin-bottom:8px;
-
-}
-
-.loginSub{
-
-  opacity:.85;
-
-  margin-bottom:20px;
-
+margin-bottom:8px;
 }
 
 .input{
-
-  width:100%;
-
-  padding:14px 17px;
-
-  border-radius:18px;
-
-  border:
-    1px solid
-    rgba(255,255,255,.30);
-
-  outline:none;
-
-  color:white;
-
-  font-size:16px;
-
-  background:
-    rgba(255,255,255,.10);
-
-  backdrop-filter:blur(10px);
-
-  -webkit-backdrop-filter:blur(10px);
-
-  margin-bottom:12px;
-
+width:100%;
+padding:14px 17px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.30);
+outline:none;
+color:white;
+font-size:16px;
+background:rgba(255,255,255,.10);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+margin-bottom:12px;
 }
 
 .input::placeholder{
-
-  color:
-    rgba(255,255,255,.65);
-
+color:rgba(255,255,255,.65);
 }
 
 .hint{
-
-  font-size:13px;
-
-  opacity:.75;
-
-  margin-bottom:18px;
-
+font-size:13px;
+opacity:.75;
+margin-bottom:18px;
 }
 
 .loginError{
-
-  color:#ffb5df;
-
-  font-size:14px;
-
-  font-weight:bold;
-
-  min-height:20px;
-
-  margin-top:12px;
-
+color:#ffb5df;
+font-size:14px;
+font-weight:bold;
+min-height:20px;
+margin-top:12px;
 }
 
-
-/* =========================
-   PENGUIN
-========================= */
-
 .penguinGif{
-
-  width:
-    min(230px,75vw);
-
-  max-height:260px;
-
-  object-fit:contain;
-
-  border-radius:20px;
-
-  margin-bottom:15px;
-
+width:min(230px,75vw);
+max-height:260px;
+object-fit:contain;
+border-radius:20px;
+margin-bottom:15px;
 }
 
 .penguinText{
-
-  font-size:23px;
-
-  font-weight:bold;
-
-  margin-bottom:18px;
-
+font-size:23px;
+font-weight:bold;
+margin-bottom:18px;
 }
 
 .sayHello{
-
-  background:
-    linear-gradient(
-      135deg,
-      #ff66c4,
-      #8d4ddd
-    );
-
+background:linear-gradient(135deg,#ff66c4,#8d4ddd);
 }
 
 #penguinContinue{
-
-  display:none;
-
-  margin-top:15px;
-
+display:none;
+margin-top:15px;
 }
 
 #penguinContinue.show{
-
-  display:inline-block;
-
-  animation:
-    continueAppear .5s ease;
-
+display:inline-block;
+animation:continueAppear .5s ease;
 }
 
 @keyframes continueAppear{
-
-  0%{
-
-    opacity:0;
-
-    transform:
-      translateY(10px)
-      scale(.9);
-
-  }
-
-  100%{
-
-    opacity:1;
-
-    transform:
-      translateY(0)
-      scale(1);
-
-  }
-
+0%{opacity:0;transform:translateY(10px) scale(.9)}
+100%{opacity:1;transform:translateY(0) scale(1)}
 }
 
-
-/* =========================
-   SOUND PAGE
-========================= */
-
 .soundIcon{
-
-  font-size:55px;
-
-  margin-bottom:15px;
-
+font-size:55px;
+margin-bottom:15px;
 }
 
 .soundTitle{
-
-  font-size:27px;
-
-  margin-bottom:12px;
-
+font-size:27px;
+margin-bottom:12px;
 }
 
 .soundText{
-
-  line-height:1.7;
-
-  opacity:.88;
-
-  margin-bottom:25px;
-
+line-height:1.7;
+opacity:.88;
+margin-bottom:25px;
 }
 
 .soundButtons{
-
-  display:flex;
-
-  gap:12px;
-
-  flex-wrap:wrap;
-
-  justify-content:center;
-
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-
-/* =========================
-   BIRTHDAY
-========================= */
-
 .birthdayGif{
-
-  width:
-    min(280px,80vw);
-
-  border-radius:22px;
-
-  margin-bottom:20px;
-
-  box-shadow:
-    0 15px 40px
-    rgba(0,0,0,.25);
-
+width:min(280px,80vw);
+border-radius:22px;
+margin-bottom:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 
 .birthdayTitle{
-
-  font-size:
-    clamp(
-      27px,
-      7vw,
-      40px
-    );
-
-  margin-bottom:12px;
-
+font-size:clamp(27px,7vw,40px);
+margin-bottom:12px;
 }
 
 .birthdaySub{
-
-  font-size:16px;
-
-  line-height:1.7;
-
-  opacity:.92;
-
-  margin-bottom:24px;
-
+font-size:16px;
+line-height:1.7;
+opacity:.92;
+margin-bottom:24px;
 }
-
-
-/* =========================
-   MESSAGE PAGE
-========================= */
-
-.messageCard{
-
-  max-height:
-    calc(100vh - 45px);
-
-  display:flex;
-
-  flex-direction:column;
-
-  padding:
-    25px 18px;
-
+  .messageCard{
+max-height:calc(100vh - 45px);
+display:flex;
+flex-direction:column;
+padding:25px 18px;
 }
 
 .messageScroll{
-
-  width:100%;
-
-  height:
-    min(
-      53vh,
-      420px
-    );
-
-  overflow-y:auto;
-
-  padding:
-    5px 12px 5px 4px;
-
-  text-align:left;
-
-  border-radius:18px;
-
-  background:
-    rgba(0,0,0,.10);
-
-  border:
-    1px solid
-    rgba(255,255,255,.10);
-
-  scrollbar-width:
-    thin;
-
-  scrollbar-color:
-    rgba(255,255,255,.35)
-    transparent;
-
+width:100%;
+height:min(53vh,420px);
+overflow-y:auto;
+padding:5px 12px 5px 4px;
+text-align:left;
+border-radius:18px;
+background:rgba(0,0,0,.10);
+border:1px solid rgba(255,255,255,.10);
+scrollbar-width:thin;
+scrollbar-color:rgba(255,255,255,.35) transparent;
 }
 
 .messageScroll::-webkit-scrollbar{
-
-  width:5px;
-
+width:5px;
 }
 
 .messageScroll::-webkit-scrollbar-thumb{
-
-  background:
-    rgba(255,255,255,.35);
-
-  border-radius:10px;
-
+background:rgba(255,255,255,.35);
+border-radius:10px;
 }
 
 .message{
-
-  font-size:15px;
-
-  line-height:1.9;
-
-  white-space:pre-line;
-
-  padding:8px 4px 20px;
-
+font-size:15px;
+line-height:1.9;
+white-space:pre-line;
+padding:8px 4px 20px;
 }
 
 .scrollHint{
+display:inline-block;
+margin-top:14px;
+padding:9px 17px;
+border-radius:25px;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+background:
+linear-gradient(
+135deg,
+rgba(255,92,205,.28),
+rgba(143,74,225,.30)
+);
+border:1px solid rgba(255,255,255,.35);
+box-shadow:
+0 0 18px rgba(221,88,220,.30),
+inset 0 1px 1px rgba(255,255,255,.25);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+animation:scrollHighlight 1.6s ease-in-out infinite;
+cursor:pointer;
+user-select:none;
+}
 
-  display:inline-block;
+@keyframes scrollHighlight{
+0%,100%{
+transform:translateY(0);
+box-shadow:
+0 0 14px rgba(221,88,220,.25),
+inset 0 1px 1px rgba(255,255,255,.25);
+}
+50%{
+transform:translateY(6px);
+box-shadow:
+0 0 28px rgba(239,100,226,.55),
+inset 0 1px 1px rgba(255,255,255,.35);
+}
+}
 
-  margin-top:14
-  </head>
+.scrollError{
+display:none;
+margin-top:8px;
+color:#ffb5df;
+font-size:13px;
+font-weight:bold;
+}
+
+.scrollError.show{
+display:block;
+animation:scrollErrorPop .35s ease;
+}
+
+@keyframes scrollErrorPop{
+0%{
+opacity:0;
+transform:translateY(-5px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+#continueMessage{
+display:none;
+margin-top:14px;
+}
+
+#continueMessage.show{
+display:inline-block;
+animation:continueAppear .5s ease;
+}
+
+#notificationBackdrop{
+position:fixed;
+inset:0;
+background:rgba(20,5,30,.28);
+backdrop-filter:blur(4px);
+-webkit-backdrop-filter:blur(4px);
+opacity:0;
+visibility:hidden;
+transition:.3s;
+z-index:9998;
+}
+
+#notificationBackdrop.show{
+opacity:1;
+visibility:visible;
+}
+
+#surpriseNotification{
+position:fixed;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%) scale(.7);
+width:min(88%,390px);
+padding:25px 22px;
+border-radius:25px;
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.22),
+rgba(174,71,204,.18),
+rgba(255,72,157,.13)
+);
+border:1px solid rgba(255,255,255,.35);
+backdrop-filter:blur(22px);
+-webkit-backdrop-filter:blur(22px);
+box-shadow:
+0 25px 80px rgba(0,0,0,.45),
+inset 0 1px 1px rgba(255,255,255,.25);
+text-align:center;
+opacity:0;
+visibility:hidden;
+z-index:9999;
+transition:
+opacity .35s ease,
+transform .4s cubic-bezier(.17,.89,.32,1.28);
+}
+
+#surpriseNotification.show{
+opacity:1;
+visibility:visible;
+transform:translate(-50%,-50%) scale(1);
+}
+
+.notificationEmoji{
+font-size:35px;
+margin-bottom:8px;
+}
+
+.notificationTitle{
+font-size:22px;
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.notificationText{
+font-size:14px;
+line-height:1.6;
+opacity:.9;
+}
+
+.notificationPop{
+animation:notificationPop .45s ease;
+}
+
+@keyframes notificationPop{
+0%{
+transform:translate(-50%,-50%) scale(.65) rotate(-2deg);
+}
+65%{
+transform:translate(-50%,-50%) scale(1.06) rotate(1deg);
+}
+100%{
+transform:translate(-50%,-50%) scale(1) rotate(0);
+}
+}
+
+.videoCard{
+width:min(95%,650px);
+}
+
+.videoTitle{
+font-size:clamp(25px,6vw,34px);
+margin-bottom:20px;
+}
+
+#birthdayVideo{
+width:100%;
+max-height:70vh;
+border-radius:20px;
+background:black;
+display:block;
+}
+
+.finalTitle{
+font-size:clamp(28px,7vw,42px);
+margin-bottom:15px;
+}
+
+.finalText{
+line-height:1.8;
+font-size:16px;
+}
+
+.lastPrayer{
+margin-top:20px;
+color:#c58cff;
+font-size:16px;
+font-weight:bold;
+line-height:1.7;
+text-shadow:0 2px 12px rgba(170,80,255,.25);
+}
+
+@media(max-width:480px){
+
+.page{
+padding:22px 12px;
+}
+
+.card{
+padding:25px 17px;
+}
+
+.messageScroll{
+height:52vh;
+}
+
+}
+
+</style>
+</head>
 
 <body>
-
-
-<!-- =========================
-     FLOATING EMOJIS
-========================= -->
-
-<div class="floating f1">🤍</div>
+  <div class="floating f1">🤍</div>
 <div class="floating f2">🙂‍↔️</div>
 <div class="floating f3">🫶🏻</div>
 <div class="floating f4">💓</div>
@@ -839,256 +570,201 @@ p{
 <div class="floating f9">🥰</div>
 <div class="floating f10">🤍</div>
 
-
-<!-- =========================
-     BACKGROUND MUSIC
-========================= -->
-
 <audio
-  id="backgroundMusic"
-  preload="auto"
-  playsinline
+id="backgroundMusic"
+preload="auto"
+playsinline
 >
-
-  <source
-    src="https://res.cloudinary.com/s4rjpsff/video/upload/v1788244715/Haareya_Piano_Instrumental___Karaoke_With_Lyrics___Arijit_Singh___Notes___Hindi_Song_Keyboard_256k__1.mp3"
-    type="audio/mpeg"
-  >
-
+<source
+src="https://res.cloudinary.com/s4rjpsff/video/upload/v1788244715/Haareya_Piano_Instrumental___Karaoke_With_Lyrics___Arijit_Singh___Notes___Hindi_Song_Keyboard_256k__1.mp3"
+type="audio/mpeg"
+>
 </audio>
 
 
-<!-- =========================
-     WELCOME PAGE
-========================= -->
+<section id="welcomePage" class="page active">
 
-<section
-  id="welcomePage"
-  class="page active"
+<div class="card">
+
+<h1 class="welcomeTitle">
+Welcome to my website page 🤍
+</h1>
+
+<div class="welcomeText">
+Here is a small website created for you... 🥹
+</div>
+
+<button
+id="openBubble"
+class="openBubble"
+onclick="openWebsite()"
 >
+Open 👐🏻
+</button>
 
-  <div class="card">
-
-    <h1 class="welcomeTitle">
-      Welcome to my website page 🤍
-    </h1>
-
-    <div class="welcomeText">
-      Here is a small website created for you... 🥹
-    </div>
-
-    <button
-      id="openBubble"
-      class="openBubble"
-      onclick="openWebsite()"
-    >
-      Open 👐🏻
-    </button>
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     LOGIN PAGE
-========================= -->
+<section id="loginPage" class="page">
 
-<section
-  id="loginPage"
-  class="page"
+<div class="card">
+
+<h2 class="loginTitle">
+Hey Deepika 🤍
+</h2>
+
+<input
+id="passwordInput"
+class="input"
+type="password"
+placeholder="Enter Password 🔑"
+autocomplete="off"
 >
 
-  <div class="card">
+<div class="hint">
+Hint: BFF 🤍
+</div>
 
-    <h2 class="loginTitle">
-      Hey Deepika 🤍
-    </h2>
+<button
+class="btn"
+onclick="checkPassword()"
+>
+Enter 💗
+</button>
 
-    <input
-      id="passwordInput"
-      class="input"
-      type="password"
-      placeholder="Enter Password 🔑"
-      autocomplete="off"
-    >
+<div
+id="loginError"
+class="loginError"
+></div>
 
-    <div class="hint">
-      Hint: BFF 🤍
-    </div>
-
-    <button
-      class="btn"
-      onclick="checkPassword()"
-    >
-      Enter 💗
-    </button>
-
-    <div
-      id="loginError"
-      class="loginError"
-    ></div>
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     PENGUIN PAGE
-========================= -->
+<section id="penguinPage" class="page">
 
-<section
-  id="penguinPage"
-  class="page"
+<div class="card">
+
+<img
+class="penguinGif"
+src="https://res.cloudinary.com/s4rjpsff/image/upload/v1790096386/64185b4165d0b-funny-penguin-animated-gifs.gif"
+alt="Funny penguin"
 >
 
-  <div class="card">
+<div class="penguinText">
+Hello Deepika! 🐧🤍
+</div>
 
-    <img
-      class="penguinGif"
-      src="https://res.cloudinary.com/s4rjpsff/image/upload/v1790096386/64185b4165d0b-funny-penguin-animated-gifs.gif"
-      alt="Funny penguin"
-    >
+<button
+id="sayHelloButton"
+class="btn sayHello"
+onclick="speakHelloAndShowContinue()"
+>
+🔊 Say Hello!
+</button>
 
-    <div class="penguinText">
-      Hello Deepika! 🐧🤍
-    </div>
+<br>
 
-    <button
-      id="sayHelloButton"
-      class="btn sayHello"
-      onclick="speakHelloAndShowContinue()"
-    >
-      🔊 Say Hello!
-    </button>
+<button
+id="penguinContinue"
+class="btn"
+onclick="goToSoundPage()"
+>
+Continue 💗
+</button>
 
-    <br>
-
-    <button
-      id="penguinContinue"
-      class="btn"
-      onclick="goToSoundPage()"
-    >
-      Continue 💗
-    </button>
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     SOUND PAGE
-========================= -->
+<section id="soundPage" class="page">
 
-<section
-  id="soundPage"
-  class="page"
+<div class="card">
+
+<div class="soundIcon">
+🔊
+</div>
+
+<h2 class="soundTitle">
+Please increase the sound a little 🔊
+</h2>
+
+<div class="soundText">
+Turn your volume up a little...
+</div>
+
+<div class="soundButtons">
+
+<button
+class="btn"
+onclick="startBirthday()"
 >
+Done 🤘🏻
+</button>
 
-  <div class="card">
+<button
+class="btn"
+onclick="startBirthday()"
+>
+Okay 😊
+</button>
 
-    <div class="soundIcon">
-      🔊
-    </div>
+</div>
 
-    <h2 class="soundTitle">
-      Please increase the sound a little 🔊
-    </h2>
-
-    <div class="soundText">
-      Turn your volume up a little...
-    </div>
-
-    <div class="soundButtons">
-
-      <button
-        class="btn"
-        onclick="startBirthday()"
-      >
-        Done 🤘🏻
-      </button>
-
-      <button
-        class="btn"
-        onclick="startBirthday()"
-      >
-        Okay 😊
-      </button>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     BIRTHDAY PAGE
-========================= -->
+<section id="birthdayPage" class="page">
 
-<section
-  id="birthdayPage"
-  class="page"
+<div class="card">
+
+<img
+class="birthdayGif"
+src="https://res.cloudinary.com/s4rjpsff/image/upload/v1789746473/happy-dance-birthday.gif"
+alt="Happy Birthday"
 >
 
-  <div class="card">
+<h1 class="birthdayTitle">
+Happy Birthday Deepika 🥹🤍
+</h1>
 
-    <img
-      class="birthdayGif"
-      src="https://res.cloudinary.com/s4rjpsff/image/upload/v1789746473/happy-dance-birthday.gif"
-      alt="Happy Birthday"
-    >
+<div class="birthdaySub">
+Wishing you a very Happy Birthday 💛
+<br>
+This little surprise is just for you 🤍
+</div>
 
-    <h1 class="birthdayTitle">
-      Happy Birthday Deepika 🥹🤍
-    </h1>
+<button
+class="btn"
+onclick="openMessagePage()"
+>
+Continue 💌
+</button>
 
-    <div class="birthdaySub">
-
-      Wishing you a very Happy Birthday 💛
-
-      <br>
-
-      This little surprise is just for you 🤍
-
-    </div>
-
-    <button
-      class="btn"
-      onclick="openMessagePage()"
-    >
-      Continue 💌
-    </button>
-
-  </div>
+</div>
 
 </section>
+<section id="messagePage" class="page">
 
+<div class="card messageCard">
 
-<!-- =========================
-     MESSAGE PAGE
-========================= -->
+<h2>
+Hey best friend... 🤍
+</h2>
 
-<section
-  id="messagePage"
-  class="page"
+<div
+id="messageScroll"
+class="messageScroll"
+onscroll="checkMessageScroll()"
 >
 
-  <div class="card messageCard">
-
-    <h2>
-      Hey best friend... 🤍
-    </h2>
-
-    <div
-      id="messageScroll"
-      class="messageScroll"
-      onscroll="checkMessageScroll()"
-    >
-
-      <div class="message">
+<div class="message">
 
 Wishing you many many happy returns of the day 🤍🐷
 
@@ -1116,1124 +792,815 @@ Enjoy your most delicious life.
 
 Grow a lot in life. 🥰🎂
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-
-    <div
-      id="scrollHint"
-      class="scrollHint"
-      onclick="scrollHintError()"
-    >
-      Scroll down 👇🏻
-    </div>
-
-
-    <div
-      id="continueMessage"
-
-class="btn"
-
+<div
+id="scrollHint"
+class="scrollHint"
+onclick="scrollHintError()"
 >
+Scroll down 👇🏻
+</div>
 
-onclick="continue After Message()"
+<div
+id="scrollError"
+class="scrollError"
+>
+Abee dheere dheere niche scroll kar... msg ko 😭😂
+</div>
 
-Continue
-
+<button
+id="continueMessage"
+class="btn"
+onclick="continueAfterMessage()"
+>
+Continue 💌
 </button>
 
 </div>
 
 </section>
 
-NOTIFICATION
 
-<div
+<div id="notificationBackdrop"></div>
 
-id="notificationBackdrop"
-
-></div>
-
-<div
-
->
-
-id="surprise Notification"
+<div id="surpriseNotification">
 
 <div class="notificationEmoji">
-
+🥹🤍
 </div>
-  <div class="notificationTitle">
 
+<div class="notificationTitle">
 Wait...
-
 </div>
 
 <div class="notificationText">
-
 One last little surprise is waiting for you...
-
 </div>
 
 </div>
-  <!-- =========================
-     VIDEO PAGE
-========================= -->
 
-<section
-  id="videoPage"
-  class="page"
+
+<section id="videoPage" class="page">
+
+<div class="card videoCard">
+
+<h2 class="videoTitle">
+A small vdo for u
+</h2>
+
+<video
+id="birthdayVideo"
+playsinline
+preload="auto"
+controls
+controlsList="nodownload"
 >
 
-  <div class="card videoCard">
+<source
+src="https://res.cloudinary.com/s4rjpsff/video/upload/v1790493846/InShot_20260901_181719307.mp4"
+type="video/mp4"
+>
 
-    <h2 class="videoTitle">
-      A small vdo for u
-    </h2>
+</video>
 
-    <video
-      id="birthdayVideo"
-      playsinline
-      preload="auto"
-      controls
-      controlsList="nodownload"
-    >
-
-      <source
-        src="https://res.cloudinary.com/s4rjpsff/video/upload/v1790493846/InShot_20260901_181719307.mp4"
-        type="video/mp4"
-      >
-
-    </video>
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     FINAL PAGE
-========================= -->
+<section id="finalPage" class="page">
 
-<section
-  id="finalPage"
-  class="page"
->
+<div class="card">
 
-  <div class="card">
+<h1 class="finalTitle">
+Bye Deepika 🥹💗
+</h1>
 
-    <h1 class="finalTitle">
-      Bye Deepika 🥹💗
-    </h1>
+<div class="finalText">
 
-    <div class="finalText">
+Once again, wishing you a very Happy Birthday Deepika 🎂🤍✨
 
-      Once again, wishing you a very Happy Birthday Deepika 🎂🤍✨
+<br><br>
 
-      <br><br>
+Always keep smiling and always stay happy. 🫶🏻
 
-      Always keep smiling and always stay happy. 🫶🏻
+</div>
 
-    </div>
+<div class="lastPrayer">
 
-    <div class="lastPrayer">
+I will pray to God that we will always be good friends...🥰🤍
 
-      I will pray to God that we will always be good friends...🥰🤍
+</div>
 
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
 <script>
+  function showPage(pageId){
 
+const pages=document.querySelectorAll(".page");
 
-/* =========================
-   PAGE SWITCH
-========================= */
+pages.forEach(function(page){
+page.classList.remove("active");
+});
 
-function showPage(pageId){
+const target=document.getElementById(pageId);
 
-  const pages =
-    document.querySelectorAll(".page");
+if(target){
 
-  pages.forEach(
-    function(page){
+target.classList.add("active");
 
-      page.classList.remove(
-        "active"
-      );
+window.scrollTo(0,0);
 
-    }
-  );
-
-  const target =
-    document.getElementById(
-      pageId
-    );
-
-  if(target){
-
-    target.classList.add(
-      "active"
-    );
-
-    window.scrollTo(
-      0,
-      0
-    );
-
-  }
+}
 
 }
 
 
-/* =========================
-   MUSIC + VIDEO
-========================= */
+const music=document.getElementById("backgroundMusic");
 
-const music =
-  document.getElementById(
-    "backgroundMusic"
-  );
+const video=document.getElementById("birthdayVideo");
 
-const video =
-  document.getElementById(
-    "birthdayVideo"
-  );
-
-
-/* =========================
-   BUBBLE POP SOUND
-========================= */
 
 function bubblePopSound(){
 
-  try{
+try{
 
-    const AudioContext =
-      window.AudioContext ||
-      window.webkitAudioContext;
+const AudioContext=
+window.AudioContext ||
+window.webkitAudioContext;
 
-    const ctx =
-      new AudioContext();
+const ctx=new AudioContext();
 
-    const now =
-      ctx.currentTime;
+const now=ctx.currentTime;
 
-    const master =
-      ctx.createGain();
+const master=ctx.createGain();
 
-    master.gain.setValueAtTime(
-      1.4,
-      now
-    );
+master.gain.setValueAtTime(1.4,now);
 
-    master.gain.exponentialRampToValueAtTime(
-      0.0001,
-      now + 0.55
-    );
+master.gain.exponentialRampToValueAtTime(
+0.0001,
+now+0.55
+);
 
-    master.connect(
-      ctx.destination
-    );
+master.connect(ctx.destination);
 
 
-    /* FIRST POP */
+/* FIRST POP */
 
-    const pop =
-      ctx.createOscillator();
+const pop=ctx.createOscillator();
 
-    const popGain =
-      ctx.createGain();
+const popGain=ctx.createGain();
 
-    pop.type =
-      "sine";
+pop.type="sine";
 
-    pop.frequency.setValueAtTime(
-      500,
-      now
-    );
+pop.frequency.setValueAtTime(
+500,
+now
+);
 
-    pop.frequency.exponentialRampToValueAtTime(
-      55,
-      now + 0.32
-    );
+pop.frequency.exponentialRampToValueAtTime(
+55,
+now+0.32
+);
 
-    popGain.gain.setValueAtTime(
-      0.0001,
-      now
-    );
+popGain.gain.setValueAtTime(
+0.0001,
+now
+);
 
-    popGain.gain.exponentialRampToValueAtTime(
-      1.0,
-      now + 0.015
-    );
+popGain.gain.exponentialRampToValueAtTime(
+1.0,
+now+0.015
+);
 
-    popGain.gain.exponentialRampToValueAtTime(
-      0.0001,
-      now + 0.35
-    );
+popGain.gain.exponentialRampToValueAtTime(
+0.0001,
+now+0.35
+);
 
-    pop.connect(
-      popGain
-    );
+pop.connect(popGain);
 
-    popGain.connect(
-      master
-    );
+popGain.connect(master);
 
-    pop.start(
-      now
-    );
+pop.start(now);
 
-    pop.stop(
-      now + 0.36
-    );
+pop.stop(now+0.36);
 
 
-    /* CRACK SOUND */
+/* CRACK */
 
-    const crack =
-      ctx.createOscillator();
+const crack=ctx.createOscillator();
 
-    const crackGain =
-      ctx.createGain();
+const crackGain=ctx.createGain();
 
-    crack.type =
-      "triangle";
+crack.type="triangle";
 
-    crack.frequency.setValueAtTime(
-      1250,
-      now
-    );
+crack.frequency.setValueAtTime(
+1250,
+now
+);
 
-    crack.frequency.exponentialRampToValueAtTime(
-      180,
-      now + 0.18
-    );
+crack.frequency.exponentialRampToValueAtTime(
+180,
+now+0.18
+);
 
-    crackGain.gain.setValueAtTime(
-      0.0001,
-      now
-    );
+crackGain.gain.setValueAtTime(
+0.0001,
+now
+);
 
-    crackGain.gain.exponentialRampToValueAtTime(
-      0.75,
-      now + 0.008
-    );
+crackGain.gain.exponentialRampToValueAtTime(
+0.75,
+now+0.008
+);
 
-    crackGain.gain.exponentialRampToValueAtTime(
-      0.0001,
-      now + 0.2
-    );
+crackGain.gain.exponentialRampToValueAtTime(
+0.0001,
+now+0.2
+);
 
-    crack.connect(
-      crackGain
-    );
+crack.connect(crackGain);
 
-    crackGain.connect(
-      master
-    );
+crackGain.connect(master);
 
-    crack.start(
-      now
-    );
+crack.start(now);
 
-    crack.stop(
-      now + 0.21
-    );
+crack.stop(now+0.21);
 
 
-    /* SECOND POP */
+/* SECOND POP */
 
-    const pop2 =
-      ctx.createOscillator();
+const pop2=ctx.createOscillator();
 
-    const pop2Gain =
-      ctx.createGain();
+const pop2Gain=ctx.createGain();
 
-    pop2.type =
-      "sine";
+pop2.type="sine";
 
-    pop2.frequency.setValueAtTime(
-      700,
-      now + 0.06
-    );
+pop2.frequency.setValueAtTime(
+700,
+now+0.06
+);
 
-    pop2.frequency.exponentialRampToValueAtTime(
-      80,
-      now + 0.30
-    );
+pop2.frequency.exponentialRampToValueAtTime(
+80,
+now+0.30
+);
 
-    pop2Gain.gain.setValueAtTime(
-      0.0001,
-      now
-    );
+pop2Gain.gain.setValueAtTime(
+0.0001,
+now
+);
 
-    pop2Gain.gain.exponentialRampToValueAtTime(
-      0.65,
-      now + 0.07
-    );
+pop2Gain.gain.exponentialRampToValueAtTime(
+0.65,
+now+0.07
+);
 
-    pop2Gain.gain.exponentialRampToValueAtTime(
-      0.0001,
-      now + 0.35
-    );
+pop2Gain.gain.exponentialRampToValueAtTime(
+0.0001,
+now+0.35
+);
 
-    pop2.connect(
-      pop2Gain
-    );
+pop2.connect(pop2Gain);
 
-    pop2Gain.connect(
-      master
-    );
+pop2Gain.connect(master);
 
-    pop2.start(
-      now + 0.05
-    );
+pop2.start(now+0.05);
 
-    pop2.stop(
-      now + 0.36
-    );
+pop2.stop(now+0.36);
 
 
-    /* ECHO */
+/* ECHO */
 
-    const echo =
-      ctx.createOscillator();
+const echo=ctx.createOscillator();
 
-    const echoGain =
-      ctx.createGain();
+const echoGain=ctx.createGain();
 
-    echo.type =
-      "sine";
+echo.type="sine";
 
-    echo.frequency.setValueAtTime(
-      300,
-      now + 0.16
-    );
+echo.frequency.setValueAtTime(
+300,
+now+0.16
+);
 
-    echo.frequency.exponentialRampToValueAtTime(
-      70,
-      now + 0.5
-    );
+echo.frequency.exponentialRampToValueAtTime(
+70,
+now+0.5
+);
 
-    echoGain.gain.setValueAtTime(
-      0.0001,
-      now
-    );
+echoGain.gain.setValueAtTime(
+0.0001,
+now
+);
 
-    echoGain.gain.exponentialRampToValueAtTime(
-      0.35,
-      now + 0.18
-    );
+echoGain.gain.exponentialRampToValueAtTime(
+0.35,
+now+0.18
+);
 
-    echoGain.gain.exponentialRampToValueAtTime(
-      0.0001,
-      now + 0.55
-    );
+echoGain.gain.exponentialRampToValueAtTime(
+0.0001,
+now+0.55
+);
 
-    echo.connect(
-      echoGain
-    );
+echo.connect(echoGain);
 
-    echoGain.connect(
-      master
-    );
+echoGain.connect(master);
 
-    echo.start(
-      now + 0.15
-    );
+echo.start(now+0.15);
 
-    echo.stop(
-      now + 0.56
-    );
-
-  }
-
-  catch(error){
-
-    console.log(
-      "Bubble sound unavailable:",
-      error
-    );
-
-  }
+echo.stop(now+0.56);
 
 }
 
+catch(error){
 
-/* =========================
-   OPEN WEBSITE
-========================= */
+console.log(
+"Bubble sound unavailable:",
+error
+);
+
+}
+
+}
+
 
 function openWebsite(){
 
-  const bubble =
-    document.getElementById(
-      "openBubble"
-    );
+const bubble=
+document.getElementById("openBubble");
 
-  if(
-    bubble.classList.contains(
-      "burst"
-    )
-  ){
+if(
+bubble.classList.contains("burst")
+){
 
-    return;
-
-  }
-
-  bubblePopSound();
-
-  bubble.classList.add(
-    "burst"
-  );
-
-  setTimeout(
-    function(){
-
-      showPage(
-        "loginPage"
-      );
-
-      bubble.classList.remove(
-        "burst"
-      );
-
-    },
-    650
-  );
+return;
 
 }
 
+bubblePopSound();
 
-/* =========================
-   PASSWORD
-========================= */
+bubble.classList.add("burst");
+
+setTimeout(function(){
+
+showPage("loginPage");
+
+bubble.classList.remove("burst");
+
+},650);
+
+}
+
 
 function checkPassword(){
 
-  const input =
-    document.getElementById(
-      "passwordInput"
-    );
+const input=
+document.getElementById("passwordInput");
 
-  const error =
-    document.getElementById(
-      "loginError"
-    );
+const error=
+document.getElementById("loginError");
 
-  if(
-    input.value === "BFF"
-  ){
+if(input.value==="BFF"){
 
-    error.textContent =
-      "";
+error.textContent="";
 
-    showPage(
-      "penguinPage"
-    );
+showPage("penguinPage");
 
-    input.value =
-      "";
+input.value="";
 
-  }
+}
 
-  else{
+else{
 
-    error.textContent =
-      "Wrong password 🥺 Try again.";
+error.textContent=
+"Wrong password 🥺 Try again.";
 
-    input.focus();
+input.focus();
 
-  }
+}
 
-    }
-    /* =========================
-   ENTER KEY LOGIN
-========================= */
+}
+  document
+.getElementById("passwordInput")
+.addEventListener(
+"keydown",
+function(event){
 
-document
-  .getElementById(
-    "passwordInput"
-  )
-  .addEventListener(
-    "keydown",
-    function(event){
+if(event.key==="Enter"){
 
-      if(
-        event.key === "Enter"
-      ){
+checkPassword();
 
-        checkPassword();
+}
 
-      }
+}
+);
 
-    }
-  );
-
-
-/* =========================
-   PENGUIN TTS
-========================= */
 
 function speakHelloAndShowContinue(){
 
-  const continueButton =
-    document.getElementById(
-      "penguinContinue"
-    );
+const continueButton=
+document.getElementById("penguinContinue");
 
-  continueButton.classList.remove(
-    "show"
-  );
+continueButton.classList.remove("show");
 
-  if(
-    !(
-      "speechSynthesis"
-      in window
-    )
-  ){
+if(!("speechSynthesis" in window)){
 
-    continueButton.classList.add(
-      "show"
-    );
+continueButton.classList.add("show");
 
-    return;
-
-  }
-
-  speechSynthesis.cancel();
-
-  speechSynthesis.resume();
-
-  const voice =
-    new SpeechSynthesisUtterance(
-      "Hello Deepika!"
-    );
-
-  voice.lang =
-    "en-US";
-
-  voice.rate =
-    0.78;
-
-  voice.pitch =
-    1.05;
-
-  voice.volume =
-    1.0;
-
-
-  const voices =
-    speechSynthesis.getVoices();
-
-  const englishVoice =
-    voices.find(
-      function(v){
-
-        return v.lang &&
-          v.lang
-            .toLowerCase()
-            .startsWith("en");
-
-      }
-    );
-
-
-  if(
-    englishVoice
-  ){
-
-    voice.voice =
-      englishVoice;
-
-  }
-
-
-  speechSynthesis.speak(
-    voice
-  );
-
-
-  voice.onstart =
-    function(){
-
-      setTimeout(
-        function(){
-
-          continueButton.classList.add(
-            "show"
-          );
-
-        },
-        400
-      );
-
-    };
-
-
-  setTimeout(
-    function(){
-
-      continueButton.classList.add(
-        "show"
-      );
-
-    },
-    1500
-  );
+return;
 
 }
 
+speechSynthesis.cancel();
 
-/* =========================
-   SOUND PAGE
-========================= */
+speechSynthesis.resume();
+
+const voice=
+new SpeechSynthesisUtterance(
+"Hello Deepika!"
+);
+
+voice.lang="en-US";
+
+voice.rate=.78;
+
+voice.pitch=1.05;
+
+voice.volume=1.0;
+
+const voices=
+speechSynthesis.getVoices();
+
+const englishVoice=
+voices.find(
+function(v){
+
+return v.lang &&
+v.lang.toLowerCase().startsWith("en");
+
+}
+);
+
+if(englishVoice){
+
+voice.voice=englishVoice;
+
+}
+
+speechSynthesis.speak(voice);
+
+voice.onstart=function(){
+
+setTimeout(
+function(){
+
+continueButton.classList.add("show");
+
+},
+400
+);
+
+};
+
+setTimeout(
+function(){
+
+continueButton.classList.add("show");
+
+},
+1500
+);
+
+}
+
 
 function goToSoundPage(){
 
-  showPage(
-    "soundPage"
-  );
+showPage("soundPage");
 
 }
 
-
-/* =========================
-   START BIRTHDAY
-========================= */
 
 function startBirthday(){
 
-  music.volume =
-    1.0;
+music.volume=1.0;
 
-  music.currentTime =
-    0;
+music.currentTime=0;
 
-  const promise =
-    music.play();
+const promise=music.play();
 
-  if(
-    promise !== undefined
-  ){
+if(promise!==undefined){
 
-    promise.catch(
-      function(error){
+promise.catch(
+function(error){
 
-        console.log(
-          "Haareya play error:",
-          error
-        );
+console.log(
+"Haareya play error:",
+error
+);
 
-      }
-    );
-
-  }
-
-  showPage(
-    "birthdayPage"
-  );
+}
+);
 
 }
 
+showPage("birthdayPage");
 
-/* =========================
-   MESSAGE PAGE
-========================= */
+}
+
 
 function openMessagePage(){
 
-  showPage(
-    "messagePage"
-  );
+showPage("messagePage");
 
-  const button =
-    document.getElementById(
-      "continueMessage"
-    );
+const button=
+document.getElementById(
+"continueMessage"
+);
 
-  const hint =
-    document.getElementById(
-      "scrollHint"
-    );
+const hint=
+document.getElementById(
+"scrollHint"
+);
 
-  const error =
-    document.getElementById(
-      "scrollError"
-    );
+const error=
+document.getElementById(
+"scrollError"
+);
 
-  const box =
-    document.getElementById(
-      "messageScroll"
-    );
+const box=
+document.getElementById(
+"messageScroll"
+);
 
+button.classList.remove("show");
 
-  button.classList.remove(
-    "show"
-  );
+button.style.display="none";
 
-  button.style.display =
-    "none";
+hint.style.display="inline-block";
 
+error.classList.remove("show");
 
-  hint.style.display =
-    "inline-block";
-
-
-  error.classList.remove(
-    "show"
-  );
-
-
-  box.scrollTop =
-    0;
+box.scrollTop=0;
 
 }
 
-
-/* =========================
-   MESSAGE SCROLL CHECK
-========================= */
 
 function checkMessageScroll(){
 
-  const box =
-    document.getElementById(
-      "messageScroll"
-    );
+const box=
+document.getElementById(
+"messageScroll"
+);
 
-  const button =
-    document.getElementById(
-      "continueMessage"
-    );
+const button=
+document.getElementById(
+"continueMessage"
+);
 
-  const hint =
-    document.getElementById(
-      "scrollHint"
-    );
+const hint=
+document.getElementById(
+"scrollHint"
+);
 
-  const error =
-    document.getElementById(
-      "scrollError"
-    );
+const error=
+document.getElementById(
+"scrollError"
+);
 
+const currentScroll=
+box.scrollTop;
 
-  const currentScroll =
-    box.scrollTop;
+const maxScroll=
+box.scrollHeight-box.clientHeight;
 
-  const maxScroll =
-    box.scrollHeight -
-    box.clientHeight;
+const userHasScrolled=
+currentScroll>10;
 
+const reachedBottom=
+currentScroll>=maxScroll-10;
 
-  const userHasScrolled =
-    currentScroll > 10;
+if(
+userHasScrolled &&
+reachedBottom
+){
 
+hint.style.display="none";
 
-  const reachedBottom =
-    currentScroll >=
-    maxScroll - 10;
+error.classList.remove("show");
 
+button.style.display="inline-block";
 
-  if(
-    userHasScrolled &&
-    reachedBottom
-  ){
-
-    hint.style.display =
-      "none";
-
-    error.classList.remove(
-      "show"
-    );
-
-    button.style.display =
-      "inline-block";
-
-    button.classList.add(
-      "show"
-    );
-
-  }
-
-  else{
-
-    hint.style.display =
-      "inline-block";
-
-    button.classList.remove(
-      "show"
-    );
-
-    button.style.display =
-      "none";
-
-  }
+button.classList.add("show");
 
 }
 
+else{
 
-/* =========================
-   SCROLL HINT CLICK
-========================= */
+hint.style.display="inline-block";
+
+button.classList.remove("show");
+
+button.style.display="none";
+
+}
+
+}
+
 
 function scrollHintError(){
 
-  const error =
-    document.getElementById(
-      "scrollError"
-    );
+const error=
+document.getElementById(
+"scrollError"
+);
 
-  error.classList.remove(
-    "show"
-  );
+error.classList.remove("show");
 
-  void error.offsetWidth;
+void error.offsetWidth;
 
-  error.classList.add(
-    "show"
-  );
+error.classList.add("show");
 
 }
+  function showSurpriseNotification(){
 
+const backdrop=
+document.getElementById(
+"notificationBackdrop"
+);
 
-/* =========================
-   NOTIFICATION
-========================= */
+const notification=
+document.getElementById(
+"surpriseNotification"
+);
 
-function showSurpriseNotification(){
+backdrop.classList.add("show");
 
-  const backdrop =
-    document.getElementById(
-      "notificationBackdrop"
-    );
+notification.classList.add("show");
 
-  const notification =
-    document.getElementById(
-      "surpriseNotification"
-    );
-
-
-  backdrop.classList.add(
-    "show"
-  );
-
-  notification.classList.add(
-    "show"
-  );
-
-  notification.classList.add(
-    "notificationPop"
-  );
+notification.classList.add("notificationPop");
 
 }
 
 
 function hideSurpriseNotification(){
 
-  const backdrop =
-    document.getElementById(
-      "notificationBackdrop"
-    );
+const backdrop=
+document.getElementById(
+"notificationBackdrop"
+);
 
-  const notification =
-    document.getElementById(
-      "surpriseNotification"
-    );
+const notification=
+document.getElementById(
+"surpriseNotification"
+);
 
+notification.classList.remove("show");
 
-  notification.classList.remove(
-    "show"
-  );
+notification.classList.remove("notificationPop");
 
-  notification.classList.remove(
-    "notificationPop"
-  );
+backdrop.classList.remove("show");
 
-  backdrop.classList.remove(
-    "show"
-  );
+}
 
-      }
-      /* =========================
-   CONTINUE AFTER MESSAGE
-========================= */
 
 function continueAfterMessage(){
 
-  const button =
-    document.getElementById(
-      "continueMessage"
-    );
+const button=
+document.getElementById(
+"continueMessage"
+);
 
+if(
+!button.classList.contains("show")
+){
 
-  if(
-    !button.classList.contains(
-      "show"
-    )
-  ){
-
-    return;
-
-  }
-
-
-  showSurpriseNotification();
-
-
-  setTimeout(
-    function(){
-
-      hideSurpriseNotification();
-
-      openVideoPage();
-
-    },
-    1400
-  );
+return;
 
 }
 
+showSurpriseNotification();
 
-/* =========================
-   VIDEO PAGE
-========================= */
+setTimeout(
+function(){
+
+hideSurpriseNotification();
+
+openVideoPage();
+
+},
+1400
+);
+
+}
+
 
 function openVideoPage(){
 
-  music.pause();
+music.pause();
 
-  showPage(
-    "videoPage"
-  );
+showPage("videoPage");
 
-  video.currentTime =
-    0;
+video.currentTime=0;
 
+setTimeout(
+function(){
 
-  setTimeout(
-    function(){
+const promise=video.play();
 
-      const promise =
-        video.play();
+if(promise!==undefined){
 
+promise.catch(
+function(error){
 
-      if(
-        promise !== undefined
-      ){
+console.log(
+"Video autoplay blocked:",
+error
+);
 
-        promise.catch(
-          function(error){
+}
+);
 
-            console.log(
-              "Video autoplay blocked:",
-              error
-            );
+}
 
-          }
-        );
-
-      }
-
-    },
-    250
-  );
+},
+250
+);
 
 }
 
 
-/* =========================
-   VIDEO PLAY
-========================= */
-
 video.addEventListener(
-  "play",
-  function(){
+"play",
+function(){
 
-    music.pause();
+music.pause();
 
-  }
+}
 );
 
 
-/* =========================
-   VIDEO ENDED
-========================= */
-
 video.addEventListener(
-  "ended",
-  function(){
+"ended",
+function(){
 
-    music.volume =
-      1.0;
+music.volume=1.0;
 
+const promise=music.play();
 
-    const promise =
-      music.play();
+if(promise!==undefined){
 
+promise.catch(
+function(error){
 
-    if(
-      promise !== undefined
-    ){
+console.log(
+"Haareya resume error:",
+error
+);
 
-      promise.catch(
-        function(error){
+}
+);
 
-          console.log(
-            "Haareya resume error:",
-            error
-          );
+}
 
-        }
-      );
+setTimeout(
+function(){
 
-    }
+showPage("finalPage");
 
+},
+350
+);
 
-    setTimeout(
-      function(){
-
-        showPage(
-          "finalPage"
-        );
-
-      },
-      350
-    );
-
-  }
+}
 );
 
 
-/* =========================
-   VIDEO PAUSE
-========================= */
-
 video.addEventListener(
-  "pause",
-  function(){
+"pause",
+function(){
 
-    if(
-      !video.ended
-    ){
+if(!video.ended){
 
-      music.pause();
+music.pause();
 
-    }
+}
 
-  }
+}
 );
-
-</script>
+  </script>
 
 </body>
 
 </html>
-      
+  
+  
+  
